@@ -9,7 +9,36 @@
  */
 
 body {
+  header {
+    background: #F6F7F3; 
+    box-shadow: 4px -4px 13px 0 #373737
+    //height: 600px;
+    //width: 100%;
+    }
+
   background-color: #FFF6E6;
+  #name-and-slogan {
+    //margin-left: 50%;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    }
+  img.header__logo-image {
+    width: 70%;
+    }
+  .header__site-name {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    a, a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: #373737;
+    }
+  }
+  .header__site-slogan {
+    font-size: 3em;
+    font-family: 'proxima-nova'; 
+    font-weight: 100;
+  }   
 }
 body.front {
   .region-navigation {
@@ -27,7 +56,9 @@ body.front {
     height: 600px;
     width: 100%;
   }
-
+  .header__logo-image {
+    display: none;
+    }
   .header__site-name {
     font-size: 3em;
     line-height: 1;
@@ -170,4 +201,8 @@ body.front {
 
 #intro-text {
   
+}
+
+h1#page-title {
+  margin-top: 1.5em;
 }
