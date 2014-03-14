@@ -1,0 +1,173 @@
+/**
+ * @file
+ * SMACSS Modules
+ *
+ * Adds modular sets of styles.
+ *
+ * Additional useful selectors can be found in Zen's online documentation.
+ * https://drupal.org/node/1707736
+ */
+
+body {
+  background-color: #FFF6E6;
+}
+body.front {
+  .region-navigation {
+    margin-left: 5%;
+  }
+  
+  #name-and-slogan {
+    margin-left: 50%;
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+  
+  header {
+    background: url("../images/panorama-bkgd.jpg") no-repeat scroll center top / cover  rgba(0, 0, 0, 0);
+    height: 600px;
+    width: 100%;
+  }
+
+  .header__site-name {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    a {
+    text-decoration: none;
+    color: #373737;
+    }
+  }
+  .header__site-slogan {
+    font-size: 3em;
+    font-family: 'proxima-nova'; 
+    font-weight: 100;
+  }
+  #block-block-3, #block-block-4 {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-right: 5%;
+    margin-left: 50%;
+    text-align: center;
+    //background-color: rgba(50, 50, 50, 0.6);
+    //border-radius: 10px;
+    //padding: 1em;
+    img#staff-badge {
+      width: 70%;
+      max-width: 480px;
+      box-shadow: 0px 5px 25px 3px #373737;
+      //float: right;
+    }
+    #bri-logo {
+      //float: left;
+      //width: 25%;
+      //margin-right: 5%;
+    }
+    #text-block {
+      //color: #FFF;
+      margin: 0;
+      float: left;
+      width: 67%;
+    }
+    img#scroll-button {
+      clear: both;
+      text-align: center;
+      //padding-top: 1em;
+      width: 50px;
+    }
+  }
+  .pane-block-1 {
+    padding: 0 1em;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-weight: 100;
+    #logo-container {
+      text-align: center;
+      clear: both;
+      img#icenter-logo, img#bri-logo {
+        vertical-align: middle;
+        margin: 1em 1.5em;
+      }
+    }
+    #learn-more { 
+    float: right;
+    margin-top: 1em;
+      a {
+        background-color: rgba(50, 50, 50, 0.6);
+        border-radius: 5px;
+        color: #fff;
+        display: inline-block;
+        margin: 0.15em 0;
+        padding: 0.25em 0.5em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      a:hover, a:focus, a:active{
+        background-color: #D7D5D3;
+        color: #100101;
+        @include transition(background-color 0.3s);
+      }
+    }
+  }
+  .crm-profile-name-Taglit_Fellow_Interest_13 {
+    #crm-container-new {
+      //font-size: 1.5em;
+      font-family: 'proxima-nova'; 
+      font-weight: 100;
+       input[type="text"], #crm-container.crm-public select {
+         padding: 10px;
+         width: 50%
+      }
+      .form-item {
+        margin: .667em 0;
+      }
+      .crm-submit-buttons {
+        margin: 0;
+      }
+      .crm-button, input[type="button"], input.form-submit {
+        //background: #d3d3d3;
+        //border: 1px #000 solid;
+        //border-radius: 5px;
+        //color: #000;
+        //text-shadow: none;
+      }
+      .description {
+        display: none;
+      }
+      .clear {
+        line-height: .5;
+      }
+      .crm-clear-link {
+        display: none;
+      }
+    }
+  }
+}
+
+.pane-block-2 {
+  margin-top: 2em;
+  #interest-form-wrapper {
+    //font-size: 1.5em;
+    //line-height: 1.25;
+    color: #fff;
+    background: rgba(50, 50, 50, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    #intro-text {
+      font-size: 1.5em;
+      line-height: 1.5;
+      font-weight: 100;
+    }
+  }
+}
+
+.pane-block-4 {
+  text-align: center;
+  img {
+    box-shadow: 5px 0 9px 0 #d3d3d3;
+  }
+}
+
+#intro-text {
+  
+}

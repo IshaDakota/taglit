@@ -1,0 +1,57 @@
+/**
+ * @file
+ * SMACSS Modules
+ *
+ * Adds modular sets of styles.
+ *
+ * Additional useful selectors can be found in Zen's online documentation.
+ * https://drupal.org/node/1707736
+ */
+
+
+/**
+ * Navigation bar.
+ */
+#navigation {
+  /* Sometimes you want to prevent overlapping with main div. */
+  /* overflow: hidden; */
+  background-color: #000;
+  //padding: .8em 0;
+  .block {
+    margin-bottom: 0;
+  }
+
+  .block-menu .block__title,
+  .block-menu-block .block__title {
+    @extend %element-invisible;
+  }
+
+  /* Main menu and secondary menu links and menu block links. */
+  .links,
+  .menu {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    li {
+      /* A simple method to get navigation links to appear in one line. */
+      float: left;
+      padding: 0 20px;
+      list-style-type: none;
+      list-style-image: none;
+      height: $nav-height;
+      a {
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-top: .7em;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        line-height: 1.25;
+      }
+    }
+    li.is-active {
+      background-color: #990303;
+    }
+  }
+}
