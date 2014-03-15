@@ -640,7 +640,7 @@ table {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/layouts\/_responsive\.scss}line{font-family:\0000340}}
 #content, .region-navigation, #name-and-slogan {
-  max-width: 1600px;
+  max-width: 1200px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -1935,8 +1935,8 @@ body.front #block-block-3 img#scroll-button, body.front #block-block-4 img#scrol
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003177}}
 body.front .pane-block-1 {
   padding: 0 1em;
-  margin-top: 1.5em;
-  font-size: 1.5em;
+  margin-top: 1.25em;
+  font-size: 1.25em;
   line-height: 1.5;
   font-weight: 100;
 }
@@ -2019,7 +2019,7 @@ body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new .crm-c
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003255}}
 .pane-block-2 #interest-form-wrapper #intro-text {
-  font-size: 1.5em;
+  font-size: 1.25em;
   line-height: 1.5;
   font-weight: 100;
 }
