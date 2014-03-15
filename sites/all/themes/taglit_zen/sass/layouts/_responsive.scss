@@ -70,6 +70,19 @@ img.header__logo-image {
   @include zen-grid-container();
 }
 
+  #page {
+    /* Move all the children of #main down to make room. */
+    padding-top: $nav-height;
+    position: relative;
+  }
+  #navigation {
+    /* Move the navbar up inside #main's padding. */
+    position: absolute;
+    top: 0;
+    height: $nav-height;
+    width: $zen-grid-width;
+  }
+
 /* Navigation bar */
 @media all and (min-width: 480px) {
   #page {
@@ -181,6 +194,11 @@ img.header__logo-image {
   img.header__logo-image {
     width: 70%;
     }
+  #block-block-3, #block-block-4, #block-block-5, #block-block-8 {
+    margin-right: 5%;
+    margin-left: 50%;
+    font-size: 1.25em;    
+  }
       
   .panel-col-content {
     @include zen-grid-item(2, 1);
