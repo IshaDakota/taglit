@@ -69,6 +69,12 @@ body.about {
         margin-bottom: 0.5em;
       }
     }
+    img#scroll-button {
+      clear: both;
+      text-align: center;
+      //padding-top: 1em;
+      width: 50px;
+    }    
   }
   #application-criteria ul {
     list-style-image: none;

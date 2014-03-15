@@ -1881,11 +1881,17 @@ body.about #block-block-5 ul li {
   margin-left: -25px;
   margin-bottom: 0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000372}}
+body.about #block-block-5 img#scroll-button {
+  clear: both;
+  text-align: center;
+  width: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000379}}
 body.about #application-criteria ul {
   list-style-image: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000381}}
 body.about #application-criteria ul li {
   background: url("../images/checkbox-icon.png") no-repeat 0 0;
   background-size: 25px 25px;
@@ -1894,11 +1900,11 @@ body.about #application-criteria ul li {
   margin-left: -25px;
   margin-bottom: 0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000391}}
 body.about #dates-deadlines ul {
   list-style-image: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\0000393}}
 body.about #dates-deadlines ul li {
   background: url("../images/calendar-icon.png") no-repeat 0 0;
   background-size: 25px 25px;
@@ -1908,34 +1914,34 @@ body.about #dates-deadlines ul li {
   margin-bottom: 0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003106}}
 body.front header {
   background: url("../images/panorama-bkgd.jpg") no-repeat scroll center top/cover rgba(0, 0, 0, 0);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003109}}
 body.front #block-block-3, body.front #block-block-4 {
   font-weight: 100;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003112}}
 body.front #block-block-3 img#staff-badge, body.front #block-block-4 img#staff-badge {
   width: 70%;
   max-width: 480px;
   box-shadow: 0px 5px 25px 3px #373737;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003119}}
 body.front #block-block-3 #text-block, body.front #block-block-4 #text-block {
   margin: 0;
   float: left;
   width: 67%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003124}}
 body.front #block-block-3 img#scroll-button, body.front #block-block-4 img#scroll-button {
   clear: both;
   text-align: center;
   width: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003131}}
 body.front .pane-block-1 {
   padding: 0 1em;
   margin-top: 1.25em;
@@ -1943,23 +1949,23 @@ body.front .pane-block-1 {
   line-height: 1.5;
   font-weight: 100;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003131}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003137}}
 body.front .pane-block-1 #logo-container {
   text-align: center;
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003140}}
 body.front .pane-block-1 #logo-container img#icenter-logo, body.front .pane-block-1 #logo-container img#bri-logo {
   vertical-align: middle;
   margin: 1em 1.5em;
   max-width: 150px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003146}}
 body.front .pane-block-1 #learn-more {
   float: right;
   margin-top: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003149}}
 body.front .pane-block-1 #learn-more a {
   background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
@@ -1970,7 +1976,7 @@ body.front .pane-block-1 #learn-more a {
   text-decoration: none;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003159}}
 body.front .pane-block-1 #learn-more a:hover, body.front .pane-block-1 #learn-more a:focus, body.front .pane-block-1 #learn-more a:active {
   background-color: #D7D5D3;
   color: #100101;
@@ -1979,42 +1985,42 @@ body.front .pane-block-1 #learn-more a:hover, body.front .pane-block-1 #learn-mo
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003167}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new {
   font-family: 'proxima-nova';
   font-weight: 100;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003171}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new input[type="text"], body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new #crm-container.crm-public select {
   padding: 10px;
   width: 70%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003175}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new .form-item {
   margin: .667em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003178}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new .crm-submit-buttons {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003183}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new .description {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003186}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new .clear {
   line-height: .5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003183}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003189}}
 body.front .crm-profile-name-Taglit_Fellow_Interest_13 #crm-container-new .crm-clear-link {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003197}}
 body.apply header {
   background: url("../images/panorama-bkgd-5.jpg") no-repeat scroll center top/cover rgba(0, 0, 0, 0);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003200}}
 body.apply #block-block-8 {
   color: #fff;
   line-height: 1.25;
@@ -2024,23 +2030,23 @@ body.apply #block-block-8 {
   padding: .5em 1.5em;
   box-shadow: 0px 5px 25px 3px #373737;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003202}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003208}}
 body.apply #block-block-8 img#scroll-button {
   clear: both;
   text-align: center;
   width: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003208}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003214}}
 body.apply #block-block-8 #intesive-professional {
   font-style: italic;
   font-weight: 800;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003218}}
 body.apply #block-block-8 ul {
   margin-top: 0.5em;
   list-style-image: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003221}}
 body.apply #block-block-8 ul li {
   background: url("../images/target-icon-white.png") no-repeat 0 0;
   background-size: 25px 25px;
@@ -2050,51 +2056,51 @@ body.apply #block-block-8 ul li {
   margin-bottom: 0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003233}}
 .pane-block-2 {
   margin-top: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003235}}
 .pane-block-2 #interest-form-wrapper {
   color: #fff;
   background: rgba(50, 50, 50, 0.6);
   padding: 10px 20px;
   border-radius: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003240}}
 .pane-block-2 #interest-form-wrapper #intro-text {
   font-size: 1.25em;
   line-height: 1.5;
   font-weight: 100;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003242}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003248}}
 .pane-block-4 {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003250}}
 .pane-block-4 img {
   box-shadow: 5px 0 9px 0 #d3d3d3;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003250}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003256}}
 h1#page-title {
   margin-top: 1.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003254}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003260}}
 #dates-deadlines, #application-criteria {
   border-radius: 10px;
   font-size: 1.25em;
   line-height: 1.25;
   font-weight: 100;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003268}}
 #dates-deadlines #start-application, #application-criteria #start-application {
   float: right;
   margin-top: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003271}}
 #dates-deadlines #start-application a, #application-criteria #start-application a {
   background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
@@ -2105,7 +2111,7 @@ h1#page-title {
   text-decoration: none;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003275}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003281}}
 #dates-deadlines #start-application a:hover, #dates-deadlines #start-application a:focus, #dates-deadlines #start-application a:active, #application-criteria #start-application a:hover, #application-criteria #start-application a:focus, #application-criteria #start-application a:active {
   background-color: #D7D5D3;
   color: #100101;
@@ -2115,7 +2121,7 @@ h1#page-title {
   transition: background-color 0.3s;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003291}}
 img.staff-pic {
   width: 95%;
   margin: 0 auto;
