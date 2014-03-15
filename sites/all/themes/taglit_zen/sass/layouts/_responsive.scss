@@ -41,6 +41,15 @@ $zen-auto-include-item-base: false;
   max-width: 1200px;
 }
 
+#name-and-slogan {
+    //margin-left: 50%;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    }
+img.header__logo-image {
+    //width: 70%;
+    }
+
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
 #header,
 #content,
@@ -164,6 +173,15 @@ $zen-auto-include-item-base: false;
 
   $zen-column-count: 4;
   
+  #name-and-slogan {
+    margin-left: 50%;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    }
+  img.header__logo-image {
+    width: 70%;
+    }
+      
   .panel-col-content {
     @include zen-grid-item(2, 1);
   }

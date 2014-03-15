@@ -9,39 +9,40 @@
  */
 
 body {
-  #block-block-3, #block-block-4  {
-    font-size: 1.5em;
-    font-weight: 100;
-    margin-right: 5%;
-    margin-left: 50%;
-    text-align: center;
-    //background-color: rgba(50, 50, 50, 0.6);
-    //border-radius: 10px;
-    //padding: 1em;
-    img#staff-badge {
-      width: 70%;
-      max-width: 480px;
-      box-shadow: 0px 5px 25px 3px #373737;
-      //float: right;
-    }
-    #bri-logo {
-      //float: left;
-      //width: 25%;
-      //margin-right: 5%;
-    }
-    #text-block {
-      //color: #FFF;
-      margin: 0;
-      float: left;
-      width: 67%;
-    }
-    img#scroll-button {
-      clear: both;
-      text-align: center;
-      //padding-top: 1em;
-      width: 50px;
+  background-color: #FFF6E6;
+}
+
+body.about, body.front, body.apply {
+  header {
+    height: 600px;
+    width: 100%;
+    box-shadow: 0 1px 13px 0 #373737
+  }
+  .header__logo-image {
+    display: none;
+  }
+
+  .header__site-name {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+    a, a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: #373737;
     }
   }
+  .header__site-slogan {
+    font-size: 3em;
+    font-family: 'proxima-nova'; 
+    font-weight: 100;
+  }
+}
+
+body.about {
+  header {
+    background: url("../images/panorama-bkgd-2.jpg") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
+  }  
+    
   #block-block-5 {
     color: #fff;
     font-size: 1.25em;
@@ -69,77 +70,36 @@ body {
         margin-bottom: 0.5em;
       }
     }
-
-  }    
-header {
-    background: url("../images/panorama-bkgd-2.jpg") no-repeat scroll center top / cover  rgba(0, 0, 0, 0);
-    height: 600px;
-    width: 100%;
-    box-shadow: 0 1px 13px 0 #373737
   }
-  .header__logo-image {
-    display: none;
-    }    
-
-  background-color: #FFF6E6;
-
+  #application-criteria ul {
+    list-style-image: none;
+    li {
+      background: url('../images/checkbox-icon.png') no-repeat 0 0;
+      background-size: 25px 25px;
+      list-style-type: none;
+      padding-left: 35px;
+      margin-left: -25px;
+      margin-bottom: 0.5em;
+    }
+  }
   
-  #name-and-slogan {
-    margin-left: 50%;
-    margin-bottom: 2em;
-    margin-top: 1em;
+  #dates-deadlines ul {
+    list-style-image: none;
+    li {
+      background: url('../images/calendar-icon.png') no-repeat 0 0;
+      background-size: 25px 25px;
+      list-style-type: none;
+      padding-left: 35px;
+      margin-left: -25px;
+      margin-bottom: 0.5em;
     }
-  img.header__logo-image {
-    width: 70%;
-    }
-  .header__site-name {
-    font-size: 3em;
-    line-height: 1;
-    margin-bottom: 0.5em;
-    a, a:hover, a:link, a:visited {
-    text-decoration: none;
-    color: #373737;
-    }
-  }
-  .header__site-slogan {
-    font-size: 3em;
-    font-family: 'proxima-nova'; 
-    font-weight: 100;
-  }   
+  }      
 }
+
+
 body.front {
-  .region-navigation {
-    //margin-left: 5%;
-  }
-  
-  #name-and-slogan {
-    margin-left: 50%;
-    margin-bottom: 2em;
-    margin-top: 1em;
-  }
-  
   header {
     background: url("../images/panorama-bkgd.jpg") no-repeat scroll center top / cover  rgba(0, 0, 0, 0);
-    height: 600px;
-    width: 100%;
-    box-shadow: 0 1px 13px 0 #373737
-  }
-  .header__logo-image {
-    display: none;
-    }
-  .header__site-name {
-    font-size: 3em;
-    line-height: 1;
-    margin-bottom: 0.5em;
-    a {
-    text-decoration: none;
-    color: #373737;
-    }
-  }
-  .header__site-slogan {
-    font-size: 3em;
-    font-family: 'proxima-nova'; 
-    font-weight: 100;
   }
   #block-block-3, #block-block-4 {
     font-size: 1.5em;
@@ -147,22 +107,14 @@ body.front {
     margin-right: 5%;
     margin-left: 50%;
     text-align: center;
-    //background-color: rgba(50, 50, 50, 0.6);
-    //border-radius: 10px;
-    //padding: 1em;
     img#staff-badge {
       width: 70%;
       max-width: 480px;
       box-shadow: 0px 5px 25px 3px #373737;
-      //float: right;
     }
     #bri-logo {
-      //float: left;
-      //width: 25%;
-      //margin-right: 5%;
     }
     #text-block {
-      //color: #FFF;
       margin: 0;
       float: left;
       width: 67%;
@@ -186,6 +138,7 @@ body.front {
       img#icenter-logo, img#bri-logo {
         vertical-align: middle;
         margin: 1em 1.5em;
+        max-width: 150px;
       }
     }
     #learn-more { 
@@ -243,11 +196,43 @@ body.front {
   }
 }
 
+body.apply {
+  header {
+    background: url("../images/panorama-bkgd-5.jpg") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
+  }
+#block-block-8 {
+    color: #fff;
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-weight: 100;
+    margin-right: 5%;
+    margin-left: 55%;
+    background-color: rgba(50, 50, 50, 0.6);
+    border-radius: 10px;
+    padding: .5em 1.5em;
+    box-shadow: 0px 5px 25px 3px #373737;
+    #intesive-professional {
+      font-style: italic;
+      font-weight: 800;
+    }
+    ul {
+      margin-top: 0.5em;
+      list-style-image: none;
+      li {
+        background: url('../images/target-icon-white.png') no-repeat 0 0;
+        background-size: 25px 25px;
+        list-style-type: none;
+        padding-left: 35px;
+        margin-left: -25px;
+        margin-bottom: 0.5em;
+      }
+    }
+  }  
+}
+
 .pane-block-2 {
   margin-top: 2em;
   #interest-form-wrapper {
-    //font-size: 1.5em;
-    //line-height: 1.25;
     color: #fff;
     background: rgba(50, 50, 50, 0.6);
     padding: 10px 20px;
@@ -267,9 +252,6 @@ body.front {
   }
 }
 
-#intro-text {
-  
-}
 
 h1#page-title {
   margin-top: 1.5em;
@@ -278,36 +260,14 @@ h1#page-title {
 #dates-deadlines, #application-criteria {
  //border: 5px solid #d3d3d3;
  border-radius: 10px;
- padding: 0.5em 1.5em;
- width: 70%;
+ //padding: 0.5em 1.5em;
+ //width: 70%;
  font-size: 1.25em;
  line-height: 1.25;
  font-weight: 100;
 }
 
-#application-criteria ul {
-  list-style-image: none;
-  li {
-    background: url('../images/checkbox-icon.png') no-repeat 0 0;
-    background-size: 25px 25px;
-    list-style-type: none;
-    padding-left: 35px;
-    margin-left: -25px;
-    margin-bottom: 0.5em;
-  }
-}
 
-#dates-deadlines ul {
-  list-style-image: none;
-  li {
-    background: url('../images/calendar-icon.png') no-repeat 0 0;
-    background-size: 25px 25px;
-    list-style-type: none;
-    padding-left: 35px;
-    margin-left: -25px;
-    margin-bottom: 0.5em;
-  }
-}
 
 img.staff-pic {
   width: 95%;
