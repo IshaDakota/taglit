@@ -2066,8 +2066,33 @@ h1#page-title {
   line-height: 1.25;
   font-weight: 100;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003268}}
+#dates-deadlines #start-application, #application-criteria #start-application {
+  float: right;
+  margin-top: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003271}}
+#dates-deadlines #start-application a, #application-criteria #start-application a {
+  background-color: rgba(50, 50, 50, 0.6);
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  margin: 0.15em 0;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003281}}
+#dates-deadlines #start-application a:hover, #dates-deadlines #start-application a:focus, #dates-deadlines #start-application a:active, #application-criteria #start-application a:hover, #application-criteria #start-application a:focus, #application-criteria #start-application a:active {
+  background-color: #D7D5D3;
+  color: #100101;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003291}}
 img.staff-pic {
   width: 95%;
   margin: 0 auto;
