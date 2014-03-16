@@ -42,13 +42,17 @@ $zen-auto-include-item-base: false;
 }
 
 #name-and-slogan {
-    //margin-left: 50%;
+    margin-left: 20%;
     margin-bottom: 2em;
     margin-top: 1em;
-    }
-img.header__logo-image {
-    //width: 70%;
-    }
+}  
+.header__site-name {
+    font-size: 2em;    
+}
+.header__site-slogan {
+    font-size: 1.5em;
+}      
+    
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
 #header,
@@ -189,19 +193,22 @@ img.header__logo-image {
   $zen-column-count: 4;
   
   #name-and-slogan {
-    margin-left: 50%;
-    margin-bottom: 2em;
-    margin-top: 1em;
+    margin-left: 56%;
     }
   img.header__logo-image {
     width: 70%;
     }
   #block-block-3, #block-block-4, #block-block-5, #block-block-8 {
     margin-right: 5%;
-    margin-left: 50%;
+    margin-left: 55%;
     font-size: 1.25em;    
   }
-      
+  .header__site-name {
+    font-size: 3em;    
+  }
+  .header__site-slogan {
+    font-size: 2em;
+  }      
   .panel-col-content {
     @include zen-grid-item(2, 1);
   }

@@ -24,19 +24,21 @@ body.about, body.front, body.apply {
   }
 
   .header__site-name {
-    font-size: 3em;
     line-height: 1;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
     a, a:hover, a:link, a:visited {
     text-decoration: none;
     color: #373737;
+    text-shadow: 2px 3px 3px rgba(10, 10, 10, 0.4);;
+    
     }
   }
   .header__site-slogan {
-    font-size: 3em;
     line-height: 1.25;
-    font-family: 'proxima-nova'; 
+    font-family: 'trajan-sans-pro'; 
     font-weight: 100;
+    color: #980202;
+    text-shadow: 2px 3px 3px rgba(10, 10, 10, 0.4);;
   }
 }
 
@@ -112,6 +114,22 @@ body.front {
   #block-block-3, #block-block-4 {
     font-weight: 100;
     text-align: center;
+    //color: #fff;
+    //line-height: 1.25;
+    //font-weight: 100;
+    //background-color: rgba(50, 50, 50, 0.6);
+    //border-radius: 10px;
+    //padding: .5em 1.5em;
+    //box-shadow: 0px 5px 25px 3px #373737;
+    #scroll-button {
+      text-align: center;
+    }
+    img#scroll-button {
+      clear: both;
+      text-align: center;
+      //padding-top: 1em;
+      width: 50px;
+    }    
     img#staff-badge {
       width: 70%;
       max-width: 480px;
@@ -200,7 +218,7 @@ body.apply {
   header {
     background: url("../images/panorama-bkgd-5.jpg") no-repeat scroll center top / cover rgba(0, 0, 0, 0);
   }
-#block-block-8 {
+  #block-block-8 {
     color: #fff;
     line-height: 1.25;
     font-weight: 100;
@@ -233,7 +251,18 @@ body.apply {
         margin-bottom: 0.5em;
       }
     }
-  }  
+  }
+  #dates-deadlines ul {
+    list-style-image: none;
+    li {
+      background: url('../images/calendar-icon.png') no-repeat 0 0;
+      background-size: 25px 25px;
+      list-style-type: none;
+      padding-left: 35px;
+      margin-left: -25px;
+      margin-bottom: 0.5em;
+    }
+  }     
 }
 
 .pane-block-2 {
