@@ -15,7 +15,6 @@ body {
 body.about, body.front, body.apply {
   header {
     min-height: 600px;
-    //height: 600px;
     width: 100%;
     box-shadow: 0 1px 13px 0 #373737
   }
@@ -114,13 +113,6 @@ body.front {
   #block-block-3, #block-block-4 {
     font-weight: 100;
     text-align: center;
-    //color: #fff;
-    //line-height: 1.25;
-    //font-weight: 100;
-    //background-color: rgba(50, 50, 50, 0.6);
-    //border-radius: 10px;
-    //padding: .5em 1.5em;
-    //box-shadow: 0px 5px 25px 3px #373737;
     #scroll-button {
       text-align: center;
     }
@@ -184,34 +176,6 @@ body.front {
       }
     }
   }
-  .crm-profile-name-Taglit_Fellow_Interest_13 {
-    #crm-container-new {
-      //font-size: 1.5em;
-      font-family: 'proxima-nova'; 
-      font-weight: 100;
-       input[type="text"], #crm-container.crm-public select {
-         padding: 10px;
-         width: 70%
-      }
-      .form-item {
-        margin: .667em 0;
-      }
-      .crm-submit-buttons {
-        margin: 0;
-      }
-      .crm-button, input[type="button"], input.form-submit {
-      }
-      .description {
-        display: none;
-      }
-      .clear {
-        line-height: .5;
-      }
-      .crm-clear-link {
-        display: none;
-      }
-    }
-  }
 }
 
 body.apply {
@@ -252,17 +216,7 @@ body.apply {
       }
     }
   }
-  #dates-deadlines ul {
-    list-style-image: none;
-    li {
-      background: url('../images/calendar-icon.png') no-repeat 0 0;
-      background-size: 25px 25px;
-      list-style-type: none;
-      padding-left: 35px;
-      margin-left: -25px;
-      margin-bottom: 0.5em;
-    }
-  }     
+  
 }
 
 .pane-block-2 {
@@ -293,13 +247,24 @@ h1#page-title {
 }
 
 #dates-deadlines, #application-criteria {
- //border: 5px solid #d3d3d3;
- border-radius: 10px;
- //padding: 0.5em 1.5em;
- //width: 70%;
- font-size: 1.25em;
- line-height: 1.25;
- font-weight: 100;
+  border-radius: 10px;
+  font-size: 1.25em;
+  line-height: 1.25;
+  font-weight: 100;
+  ul {
+    list-style-image: none;
+    li {
+      background: url('../images/calendar-icon.png') no-repeat 0 0;
+      background-size: 25px 25px;
+      list-style-type: none;
+      padding-left: 35px;
+      margin-left: -25px;
+      margin-bottom: 0.5em;
+      div#start-application {
+        display: none;
+      }
+    }
+  }
   #start-application { 
   float: right;
   margin-top: 1em;
@@ -321,7 +286,41 @@ h1#page-title {
   } 
 }
 
+.crm-profile-name-Taglit_Fellow_Interest_13 {
+  #crm-container-new {
+    font-family: 'proxima-nova'; 
+    font-weight: 100;
+     input[type="text"], #crm-container.crm-public select {
+       padding: 10px;
+       width: 70%
+    }
+    .form-item {
+      margin: .667em 0;
+    }
+    .crm-submit-buttons {
+      margin: 0;
+    }
+    .crm-button, input[type="button"], input.form-submit {
+    }
+    .description {
+      display: none;
+    }
+    .clear {
+      line-height: .5;
+    }
+    .crm-clear-link {
+      display: none;
+    }
+  }
+}
 
+body.apply {
+  #dates-deadlines {
+    #start-application {
+      display: none;
+    }
+  }
+}   
 
 img.staff-pic {
   width: 95%;
