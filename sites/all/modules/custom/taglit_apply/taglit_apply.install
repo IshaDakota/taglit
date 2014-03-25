@@ -1,0 +1,204 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the Taglit Fellows Program Application Module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+
+function taglit_apply_schema() {
+  $schema['taglit_apply'] = array(
+   'description' => 'A table that holds the data collected from the Taglit Fellows Program Application',
+   'fields' => array (
+      'ma_apply_id' => array(
+        'description'   => 'The auto-increment ID for the application',
+         'type' => 'serial',
+         'not null' => TRUE,
+         'unsigned' => TRUE,
+      ),
+      'uid' => array(
+        'default'       => 0,
+        'description'   => 'The {users}.uid that is has entered data.',
+        'type'          => 'int',
+      ),
+      'street_address' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 200,
+        'not null'      => FALSE,
+      ),      
+      'city' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 100,
+        'not null'      => FALSE,
+      ),
+      'state' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 2,
+        'not null'      => FALSE,
+      ),
+      'zip' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 10,
+        'not null'      => FALSE,
+      ),
+      'country' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 100,
+        'not null'      => FALSE,
+      ),
+      'gender' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 1,
+        'not null'      => FALSE,
+      ), 
+      'birth_date' => array(
+        'description' => 'Date field',
+        'mysql_type' => 'DATETIME',
+        'not null' => FALSE,
+      ),      
+      'us_citizen' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'citizen_other' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 100,
+        'not null'      => FALSE,
+      ),
+      'education_school' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),      
+      'education_date' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),  
+      'education_location' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),  
+      'education_degree' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),  
+      'israel_program' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),      
+      'israel_date' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),  
+      'israel_focus' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),  
+      'israel_role' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ), 
+      'curric_program' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),      
+      'curric_date' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),  
+      'curric_role' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ), 
+      'essay' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),
+      'declaration' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'initials' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 3,
+        'not null'      => FALSE,
+      ),      
+      'seca_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'secb_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'secc_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'secd_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'sece_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'secf_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'secg_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),                 
+    ),
+    'primary key'       => array('taglit_apply_id'),
+  );
+
+  return $schema;
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function taglit_apply_uninstall() {
+
+}

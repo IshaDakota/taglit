@@ -1,0 +1,5 @@
+name = Taglit Fellows Program Application System
+description = "Contains the application form and user registration data for the Taglit Fellows program"
+stylesheets[all][] = taglit_apply.css
+package = Custom
+core = 7.x

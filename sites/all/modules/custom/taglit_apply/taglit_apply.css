@@ -1,0 +1,181 @@
+/**
+ * @file
+ * CSS for the Taglit Fellows Program Application Module
+ */
+
+
+/**
+ * Bottom navigation for tool.
+ */
+.next-step {
+  margin-top: 4em;
+  margin-bottom: 3em;
+  float: left;
+}
+
+.next-step a,
+.next-step a:visited {
+  padding: 1em;
+  background: #EDEDE7;
+  border-color: #E7E7E7;
+  text-decoration: none;
+  color: #000;
+}
+
+.next-step a:active,
+.next-step a:hover {
+  padding: 1em;
+  background: #cbcbc5;
+  border-color: #E7E7E7;
+  text-decoration: none;
+}
+
+/**
+ * List of steps on the planning tool main page.
+ */
+ul.application-sections {
+  clear: left;
+  float: left;
+  list-style-type: none;
+}
+
+.block ul.application-sections li {
+  margin: .5em 0;
+}
+
+ul.application-sections li a {
+  text-decoration: none;
+  font-size: 1.25em;
+  padding: 0 0 .2em 90px;
+}
+
+ul.application-sections li.section-incomplete a {
+  background: url('./images/start-button.png') no-repeat 0 0;
+  background-size: 75px 25px;
+}
+
+ul.application-sections li.section-complete a {
+  background: url('./images/unlocked-button.png') no-repeat 0 0;
+  background-size: 75px 25px;  
+}
+
+.step-question {
+  font-weight: bold;
+}
+
+/**
+ * Image styles
+ */
+#badge-image {
+  float: left;
+  margin-right: 20px;
+}
+
+#intro-image {
+  float: right;
+  margin-left: 20px;
+}
+
+#step1-image {
+  margin: 0 auto;
+}
+
+#step1-image img {
+  width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
+#step2-image img {
+  width: 910px;
+  margin: 0 auto;
+  display: block;
+}
+
+#step3-image img, #step4-image {
+  margin: 0 auto;
+  display: block;
+}
+
+#conclusion {
+  clear: left;
+}
+
+/**
+ * Styling for the "note" divs.
+ */
+.note {
+  border: 1px solid #373737;
+  border-radius: 5px;
+  padding: 1.5em;
+  background: url('./images/yellow_notebook_paper.jpg');
+  margin: 0 2em 2em 2em;
+}
+
+.note h3.note-header{
+  margin-top: 0;
+}
+
+.checkbox-list ul {
+  list-style-type: none;
+}
+
+.block .checkbox-list ul li {
+  background: url('./images/checkbox-icon.png') no-repeat 0 0;
+  background-size: 35px 35px;
+  margin: 20px 0;
+  font-size: 1.25em;
+  padding: 0 0 .2em 50px;
+  line-height: 1.8em;
+
+}
+
+/**
+ * Single achievement notification display.
+ */
+.achievement-notification-dialog {
+  border-color: #626163;
+  margin: 0.6em;
+  padding: 0;
+  position: fixed;
+}
+
+.achievement-notification-dialog .achievement-notification {
+  background: #e2e3df;
+}
+
+
+.achievement-notification .achievement-points-box {
+  border: 1px solid #434142;
+  background: #bdbcbe;
+  margin-top: 0.6em;
+  height: 70px;
+  width: 70px;
+}
+
+.edit-section a {
+  padding: 5px;
+  transition: background-color 0.3s;
+  color: #333;
+  background-color: #dedede;
+  text-decoration: none;
+}
+
+.edit-section a:hover, .edit-section a:focus {
+  padding: 5px;
+  transition: background-color 0.3s;
+  color: #333;
+  background-color: #e7e7e7;
+  text-decoration: none;
+}
+.step h2 {
+  margin-bottom: 0;
+}
+
+.edit-section {
+  margin-bottom: 0.5em;
+}
+
+table td {
+  padding: .5em 1em;
+}
