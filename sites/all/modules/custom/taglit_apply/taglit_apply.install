@@ -13,7 +13,7 @@ function taglit_apply_schema() {
   $schema['taglit_apply'] = array(
    'description' => 'A table that holds the data collected from the Taglit Fellows Program Application',
    'fields' => array (
-      'ma_apply_id' => array(
+      'taglit_apply_id' => array(
         'description'   => 'The auto-increment ID for the application',
          'type' => 'serial',
          'not null' => TRUE,
@@ -36,6 +36,12 @@ function taglit_apply_schema() {
         'length'				=> 100,
         'not null'      => FALSE,
       ),
+      'country' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 25,
+        'not null'      => FALSE,        
+      ),
       'state' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'varchar',
@@ -48,34 +54,10 @@ function taglit_apply_schema() {
         'length'				=> 10,
         'not null'      => FALSE,
       ),
-      'country' => array(
+      'mobile_phone' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'varchar',
-        'length'				=> 100,
-        'not null'      => FALSE,
-      ),
-      'gender' => array(
-        'description'   => 'Data Field for Taglit Fellows Program Application.',
-        'type'          => 'varchar',
-        'length'				=> 1,
-        'not null'      => FALSE,
-      ), 
-      'birth_date' => array(
-        'description' => 'Date field',
-        'mysql_type' => 'DATETIME',
-        'not null' => FALSE,
-      ),      
-      'us_citizen' => array(
-        'description'   => 'Data Field for Taglit Fellows Program Application.',
-        'type'          => 'int',
-        'size'					=> 'tiny',
-        'not null'      => TRUE,
-        'default'				=> 0,
-      ),
-      'citizen_other' => array(
-        'description'   => 'Data Field for Taglit Fellows Program Application.',
-        'type'          => 'varchar',
-        'length'				=> 100,
+        'length'				=> 15,
         'not null'      => FALSE,
       ),
       'education_school' => array(
@@ -94,6 +76,86 @@ function taglit_apply_schema() {
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
       ),  
+      'languages' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),
+      'other_skills' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),
+      'jewish_elementary' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'small',
+        ),      
+      'jewish_highschool' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'small',
+        ),
+      'jewish_supplementary' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'small',
+        ),        
+      'jewish_camp' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),
+      'jewish_camp_name' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),          
+      'jewish_youthgroup' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),        
+      'jewish_youthgroup_name' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),          
+      'israel_birthright' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),
+      'israel_birthright_provider' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),                
+      'israel_birthright_staff' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),
+      'israel_birthright_staff_num' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'small',
+        ),        
+      'israel_birthright_staff_provider' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),          
       'israel_program' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
@@ -110,6 +172,12 @@ function taglit_apply_schema() {
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
       ), 
+      'prof_development' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),  
       'curric_program' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
@@ -122,7 +190,49 @@ function taglit_apply_schema() {
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
       ), 
-      'essay' => array(
+      'cv_file_path' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),
+      'prof_status' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),
+      'ed_status' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'tiny',
+        ),
+      'ed_school_name' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),
+      'prof_employer' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),
+      'prof_position' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 250,
+        'not null'      => FALSE,
+      ),   
+      'references' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),
+      'essay1' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'text',
+      ),
+      'essay2' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
       ),

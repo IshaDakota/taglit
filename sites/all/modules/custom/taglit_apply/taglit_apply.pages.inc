@@ -30,10 +30,10 @@ function taglit_apply_page() {
     'introduction' => array(
       '#type' => 'markup',
       '#markup' => '<p>' . t('Please complete all of the sections below to 
-      submit your application for the Masters Concentration in Israel 
+      submit your application for the Taglit Fellows 
       Program. You may complete work in one section and then return at 
       a later point to complete additional sections. The entire application 
-      must be complete by January 15, 2014') . '</p>
+      must be complete by May 15, 2014') . '</p>
       
       <p>' . t('When you have completed sections A - F, an additional section 
       (Section G: Declaration) will appear. After you sign and submit the 
@@ -41,8 +41,8 @@ function taglit_apply_page() {
       be able to edit any sections.') . '</p>
       
       <p>' . t('If you have any questions about your application, please 
-      contact Rachel Levin at 847-418-8336 or ') . 
-      '<a href="mailto:rachel@theicenter.org">rachel@theicenter.org</a></p>',
+      contact Aliza Goodman at 847-418-8336 or ') . 
+      '<a href="mailto:aliza@theicenter.org">aliza@theicenter.org</a></p>',
     ),
     'quest_list' => array(
       '#type' => 'markup',
@@ -54,9 +54,9 @@ function taglit_apply_page() {
         <li class = "' . ($query_select['secc_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
           l(t('Section C: Israel Experience'), 'program-application/section-c') . '</li>
         <li class = "' . ($query_select['secd_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section D: Israel Programming/Curriculum'), 'program-application/section-d') . '</li>
+          l(t('Section D: Professional Development in Jewish and Israel Education'), 'program-application/section-d') . '</li>
         <li class = "' . ($query_select['sece_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section E: Work Experience'), 'program-application/section-e') . '</li>
+          l(t('Section E: Work Experience & References'), 'program-application/section-e') . '</li>
         <li class = "' . ($query_select['secf_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
           l(t('Section F: Essay'), 'program-application/section-f') . '</li>'
         . ($app_complete == 'Y' ? '<li class = "' . ($query_select['secg_complete'] == 1 ? 'section-complete' : 'section-incomplete') . 
@@ -75,6 +75,7 @@ function taglit_apply_page() {
  * Render the page for the Section A of the Application.
  */
 function taglit_apply_seca_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.seca.form');
   $output =  array(
     'note' => array(
       '#type' => 'markup',
@@ -96,6 +97,7 @@ function taglit_apply_seca_page() {
  * Render the page for the Section B of the Application.
  */
 function taglit_apply_secb_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.secb.form');
   $output =  array(
     'header' => array(
       '#type' => 'markup',
@@ -122,15 +124,11 @@ function taglit_apply_secb_page() {
  * Render the page for the Section C of the Application.
  */
 function taglit_apply_secc_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.secc.form');
   $output =  array(
     'header' => array(
       '#type' => 'markup',
       '#markup' => '<h2 >Israel Program Information</h2>',
-    ),
-    'intro' => array(
-      '#type' => 'markup',
-      '#markup' => '<p>Beginning with most recent, please list your 
-      educational programs/experiences in Israel.:</p>',
     ),
     'display_form' => drupal_get_form('taglit_apply_secc_form'),
 
@@ -148,16 +146,11 @@ function taglit_apply_secc_page() {
  * Render the page for the Section D of the Application.
  */
 function taglit_apply_secd_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.secd.form');
   $output =  array(
     'header' => array(
       '#type' => 'markup',
-      '#markup' => '<h2 >Israel Programming/Curriculum</h2>',
-    ),
-    'intro' => array(
-      '#type' => 'markup',
-      '#markup' => '<p>In what capacity have you been involved in working on 
-      Israel Programming/Curriculum development in formal, informal or 
-      experiential settings? Please list up to three examples.</p>',
+      '#markup' => '<h2 >Professional Development in Jewish and Israel Education</h2>',
     ),
     'display_form' => drupal_get_form('taglit_apply_secd_form'),
     'main_link' => array(
@@ -174,15 +167,12 @@ function taglit_apply_secd_page() {
  * Render the page for the Section E of the Application.
  */
 function taglit_apply_sece_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.sece.form');
 	global $user;
   $output =  array(
     'header' => array(
       '#type' => 'markup',
-      '#markup' => '<h2 >Work Experience</h2>',
-    ),
-    'intro' => array(
-      '#type' => 'markup',
-      '#markup' => '<p>Please upload a copy of your CV.</p>',
+      '#markup' => '<h2 >Work Experience & References</h2>',
     ),
     'display_form' => drupal_get_form('taglit_apply_sece_form'),
 
@@ -200,6 +190,7 @@ function taglit_apply_sece_page() {
  * Render the page for the Section F of the Application.
  */
 function taglit_apply_secf_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.secf.form');
   $output =  array(
     'header' => array(
       '#type' => 'markup',
@@ -226,6 +217,7 @@ function taglit_apply_secf_page() {
  * Render the page for the Section G of the Application.
  */
 function taglit_apply_secg_page() {
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.secf.form');
   $output =  array(
     'header' => array(
       '#type' => 'markup',

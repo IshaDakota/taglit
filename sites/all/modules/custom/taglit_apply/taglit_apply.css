@@ -179,3 +179,7 @@ ul.application-sections li.section-complete a {
 table td {
   padding: .5em 1em;
 }
+
+.filter-wrapper {
+  display: none;
+}
