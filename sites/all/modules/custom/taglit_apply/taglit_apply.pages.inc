@@ -35,8 +35,8 @@ function taglit_apply_page() {
       a later point to complete additional sections. The entire application 
       must be complete by May 15, 2014') . '</p>
       
-      <p>' . t('When you have completed sections A - F, an additional section 
-      (Section G: Declaration) will appear. After you sign and submit the 
+      <p>' . t('When you have completed sections 1 - 6, an additional section 
+      (Section 7: Declaration) will appear. After you sign and submit the 
       declaration, you application will be locked and you will no longer 
       be able to edit any sections.') . '</p>
       
@@ -48,19 +48,19 @@ function taglit_apply_page() {
       '#type' => 'markup',
       '#markup' => '<ul class = "application-sections">
         <li class = "' . ($query_select['seca_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section A: General Information'), 'program-application/section-a') . '</li>
+          l(t('Section 1: General Information'), 'program-application/section-a') . '</li>
         <li class = "' . ($query_select['secb_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section B: Education' ), 'program-application/section-b') . '</li>
+          l(t('Section 2: Education' ), 'program-application/section-b') . '</li>
         <li class = "' . ($query_select['secc_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section C: Israel Experience'), 'program-application/section-c') . '</li>
+          l(t('Section 3: Israel Experience'), 'program-application/section-c') . '</li>
         <li class = "' . ($query_select['secd_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section D: Professional Development in Jewish and Israel Education'), 'program-application/section-d') . '</li>
+          l(t('Section 4: Professional Development in Jewish and Israel Education'), 'program-application/section-d') . '</li>
         <li class = "' . ($query_select['sece_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section E: Work Experience & References'), 'program-application/section-e') . '</li>
+          l(t('Section 5: Work Experience & References'), 'program-application/section-e') . '</li>
         <li class = "' . ($query_select['secf_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
-          l(t('Section F: Essay'), 'program-application/section-f') . '</li>'
+          l(t('Section 6: Essay'), 'program-application/section-f') . '</li>'
         . ($app_complete == 'Y' ? '<li class = "' . ($query_select['secg_complete'] == 1 ? 'section-complete' : 'section-incomplete') . 
-        '">' . l(t('Section G: Declaration'), 'program-application/section-g') . '</li>' : '') .
+        '">' . l(t('Section 7: Declaration'), 'program-application/section-g') . '</li>' : '') .
            '</ul>',
     ),
     'app_complete' => array(
@@ -194,12 +194,7 @@ function taglit_apply_secf_page() {
   $output =  array(
     'header' => array(
       '#type' => 'markup',
-      '#markup' => '<h2 >Essay</h2>',
-    ),
-    'intro' => array(
-      '#type' => 'markup',
-      '#markup' => '<p>In the space below, please answer one of 
-      the following questions. Responses should not exceed 500 words.</p>',
+      '#markup' => '<h2 >Essays</h2>',
     ),
     'display_form' => drupal_get_form('taglit_apply_secf_form'),
 
@@ -225,11 +220,17 @@ function taglit_apply_secg_page() {
     ),
     'intro' => array(
       '#type' => 'markup',
-      '#markup' => '<p>If offered a position in the Concentration in Israel 
-      Education Program, I agree to meet all of the program requirements 
-      including, but not limited to attending all seminars, taking the required 
-      courses, participating in the mentoring component and presenting a final 
+      '#markup' => '<p>If offered a position in the Taglit Fellows Program, 
+      I agree to meet all of the program requirements 
+      including, but not limited to attending seminars, fulfilling the on-line 
+      learning requirements, and participating in the mentoring component of the 
       project.</p>
+      
+      <p>By checking this box you confirm that Taglit Fellows has permission to 
+      use any relevant information provided by you. I will contact Taglit Fellows 
+      if the use of any information provided should be restricted.</p>
+
+      
       <p>Once you submit this declaration, your application will be submitted, 
       and you will no longer be able to edit any sections.</p>',
     ),
@@ -277,20 +278,13 @@ function taglit_apply_user_page() {
   else {
     $last_name = NULL;  
   }
-  if (isset($user_fields->field_university_program['und']['0']['value'])) { 
-    $university_program = $user_fields->field_university_program['und']['0']['value'];
-  }  
-  else {
-    $university_program = NULL;  
-  }
 
   $applicant_name = $first_name . ' ' . $middle_name . ' ' . $last_name;
   $output =  array();
   
   $output['name'] = array(
     '#type' => 'markup',
-    '#markup' => '<h2>Applicant: ' . $applicant_name . '<br>
-                  School: ' . $university_program . '</h2>',
+    '#markup' => '<h2>Applicant: ' . $applicant_name . '</h2>',
   );
 
   if ($query_select['secg_complete'] != 1 && $userid == $user->uid) {
@@ -303,21 +297,21 @@ function taglit_apply_user_page() {
   if ($query_select['seca_complete'] == 1) {
     $output['step-1'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section A: General Information</h2>
+      '#markup' => '<div class="step"><h2>General Information</h2>
         <div class="step-question"><strong>Street Address:</strong> ' . $query_select['street_address'] . '</div>
         <div class="step-question"><strong>City:</strong> ' . $query_select['city'] . '</div>
         <div class="step-question"><strong>State:</strong> ' . $query_select['state'] . '</div>
         <div class="step-question"><strong>Zip:</strong> ' . $query_select['zip'] . '</div>
         <div class="step-question"><strong>Country:</strong> ' . $query_select['country'] . '</div>
-        <div class="step-question"><strong>Citizenship</strong>: ' . ($query_select['us_citizen'] ? 'United States' : $query_select['citizen_other']) . '</div>
+        <div class="step-question"><strong>Mobile Phone</strong>: ' . $query_select['mobile_phone'] . '</div>
         </div>',
     );     
   }
   else {
     $output['step-1'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section A: General Information</h2>
-        <div class="step-incomplete">Step not yet completed.</div>
+      '#markup' => '<div class="step"><h2>General Information</h2>
+        <div class="step-incomplete">Section not yet completed.</div>
         </div>',
     );        
   }
@@ -335,9 +329,9 @@ function taglit_apply_user_page() {
     
     $output['step-2-table-start'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section B: Education</h2>
+      '#markup' => '<div class="step"><h2>Education</h2>
       <table>
-      <tr><th>School</th><th>Dates</th><th>Location</th><th>Degree</th><tr>',  
+      <tr><th>School</th><th>Dates</th><th>Location</th><th>Degree</th></tr>',  
     );
     
     $row_class = 'even';
@@ -364,12 +358,26 @@ function taglit_apply_user_page() {
     $output['step-2-table-end'] = array(
       '#type' => 'markup',
       '#markup' => '</table>',  
-    );   
+    );
+    $output['step-2-remainder'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div class="step-question"><strong>Languages:</strong> ' . $query_select['languages'] . '</div>
+        <div class="step-question"><strong>Other Skills/Certifications:</strong> ' . $query_select['other_skills'] . '</div>
+        <div class="step-question"><strong>Jewish Elementary:</strong> ' . $query_select['jewish_elementary'] . ' years</div>
+        <div class="step-question"><strong>Jewish High School:</strong> ' . $query_select['jewish_highschool'] . ' years</div>
+        <div class="step-question"><strong>Jewish Supplementary:</strong> ' . $query_select['jewish_supplementary'] . ' years</div>
+        <div class="step-question"><strong>Jewish Camp</strong>: ' . $query_select['jewish_camp'] . ' summers' . 
+          ($query_select['jewish_camp'] != 0 ?  ' - ' . $query_select['jewish_camp_name'] : '') . ' </div>
+        <div class="step-question"><strong>Jewish Youth Group</strong>: ' . 
+          ($query_select['jewish_youthgroup'] == 0 ? 'N' : 'Y - ' . $query_select['jewish_youthgroup_name']) . '</div>
+        </div>',
+    );     
+
   }
   else {
     $output['step-2'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section B: Education</h2>
+      '#markup' => '<div class="step"><h2>Education</h2>
         <div class="step-incomplete">Step not yet completed.</div>
         </div>',
     );        
@@ -382,48 +390,59 @@ function taglit_apply_user_page() {
     $israel_role = unserialize($query_select['israel_role']);
 
     $count_array = count($israel_program);
+    echo $count_array;
     
-    if ($count_array == 0) {
-      $count_array++;
-    }
-    
-    $output['step-3-table-start'] = array(
-      '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section C: Israel Experience</h2>
-      <table>
-      <tr><th>Program</th><th>Dates</th><th>Program Focus</th><th>Role</th><tr>',  
-    );
-    
-    $row_class = 'even';
-    
-    for ($i = 1; $i <= $count_array; $i++) {
-      if($i%2 == 0) {
-        $row_class = 'even';
-      }
-      else
-      {
-        $row_class = 'odd';
-      }
-      
-      $output['step-3-row' .$i] = array(
+    $output['step-3-header'] = array(
         '#type' => 'markup',
-        '#markup' => '<tr class="' . $row_class . '"><td>' .
-        $israel_program[$i] . '</td><td>' .
-        $israel_date[$i] . '</td><td>' .
-        $israel_focus[$i] . '</td><td>' .
-        $israel_role[$i] . '</td></tr>',
+        '#markup' => '<div class="step"><h2>Israel Experience</h2>
+        <div class="step-question"><strong>BRI Alum</strong>: ' . 
+          ($query_select['israel_birthright'] == 0 ? 'N' : 'Y - ' . $query_select['israel_birthright_provider']) . '</div>
+        <div class="step-question"><strong>BRI Staff</strong>: ' . 
+          ($query_select['israel_birthright_staff'] == 0 ? 'N' : 'Y - ' . $query_select['israel_birthright_staff_num'] . 
+          ' times with ' .  $query_select['israel_birthright_staff_provider']) . '</div>'
+      );
+    
+    if ($count_array != 0) {    
+      $output['step-3-table-start'] = array(
+        '#type' => 'markup',
+        '#markup' => '<table>
+        <tr><th>Program</th><th>Dates</th><th>Program Focus</th><th>Role</th><tr>',  
+      );
+      
+      $row_class = 'even';
+      
+      for ($i = 1; $i <= $count_array; $i++) {
+        if($i%2 == 0) {
+          $row_class = 'even';
+        }
+        else
+        {
+          $row_class = 'odd';
+        }
+        
+        $output['step-3-row' .$i] = array(
+          '#type' => 'markup',
+          '#markup' => '<tr class="' . $row_class . '"><td>' .
+          $israel_program[$i] . '</td><td>' .
+          $israel_date[$i] . '</td><td>' .
+          $israel_focus[$i] . '</td><td>' .
+          $israel_role[$i] . '</td></tr>',
+        );
+      }
+      $output['step-3-table-end'] = array(
+        '#type' => 'markup',
+        '#markup' => '</table>',  
       );
     }
-
-    $output['step-3-table-end'] = array(
+    $output['step-3-footer'] = array(
       '#type' => 'markup',
-      '#markup' => '</table>',  
+      '#markup' => '</div>',  
     );   
   }
   else {
     $output['step-3'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section C: Israel Experience</h2>
+      '#markup' => '<div class="step"><h2>Israel Experience</h2>
         <div class="step-incomplete">Step not yet completed.</div>
         </div>',
     );        
@@ -435,47 +454,54 @@ function taglit_apply_user_page() {
     $curric_role = unserialize($query_select['curric_role']);
 
     $count_array = count($curric_program);
-    
-    if ($count_array == 0) {
-      $count_array++;
-    }
-    
-    $output['step-4-table-start'] = array(
-      '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section D: Israel Programming/Curriculum</h2>
-      <table>
-      <tr><th>Program/Project</th><th>Dates</th><th>Role</th><tr>',  
-    );
-    
-    $row_class = 'even';
-    
-    for ($i = 1; $i <= $count_array; $i++) {
-      if($i%2 == 0) {
-        $row_class = 'even';
-      }
-      else
-      {
-        $row_class = 'odd';
-      }
-      
-      $output['step-4-row' .$i] = array(
-        '#type' => 'markup',
-        '#markup' => '<tr class="' . $row_class . '"><td>' .
-        $curric_program[$i] . '</td><td>' .
-        $curric_date[$i] . '</td><td>' .
-        $curric_role[$i] . '</td></tr>',
-      );
-    }
 
-    $output['step-4-table-end'] = array(
+    $output['step-4-header'] = array(
       '#type' => 'markup',
-      '#markup' => '</table>',  
-    );   
+      '#markup' => '<div class="step"><h2>Professional Development</h2>',  
+    );
+          
+    if ($count_array != 0) {
+    
+      $output['step-4-table-start'] = array(
+        '#type' => 'markup',
+        '#markup' => '<table>
+          <tr><th>Program/Project</th><th>Dates</th><th>Role</th></tr>',  
+      );
+      
+      $row_class = 'even';
+      
+      for ($i = 1; $i <= $count_array; $i++) {
+        if($i%2 == 0) {
+          $row_class = 'even';
+        }
+        else
+        {
+          $row_class = 'odd';
+        }
+        
+        $output['step-4-row' .$i] = array(
+          '#type' => 'markup',
+          '#markup' => '<tr class="' . $row_class . '"><td>' .
+          $curric_program[$i] . '</td><td>' .
+          $curric_date[$i] . '</td><td>' .
+          $curric_role[$i] . '</td></tr>',
+        );
+      }
+  
+      $output['step-4-table-end'] = array(
+        '#type' => 'markup',
+        '#markup' => '</table>',  
+      );   
+    }
+    $output['step-4-footer'] = array(
+      '#type' => 'markup',
+      '#markup' => '</div>',  
+    );
   }
   else {
     $output['step-4'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section D: Israel Programming/Curriculum</h2>
+      '#markup' => '<div class="step"><h2>Israel Programming/Curriculum</h2>
         <div class="step-incomplete">Step not yet completed.</div>
         </div>',
     );        
@@ -484,7 +510,7 @@ function taglit_apply_user_page() {
   if ($query_select['sece_complete'] == 1) {
     $output['step-5'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section E: Work Experience</h2>
+      '#markup' => '<div class="step"><h2>Work Experience</h2>
         <div class="step-question"><strong>Uploaded CV/Resume:</strong> <a href="/' . variable_get("file_public_path", conf_path() . "/files/") .  $query_select['cv_file_path'] . '">' . $query_select['cv_file_path'] . '</a></div>
         </div>',
     );     
@@ -492,7 +518,7 @@ function taglit_apply_user_page() {
   else {
     $output['step-5'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section E: Work Experience</h2>
+      '#markup' => '<div class="step"><h2>Work Experience</h2>
         <div class="step-incomplete">Step not yet completed.</div>
         </div>',
     );        
@@ -501,7 +527,7 @@ function taglit_apply_user_page() {
   if ($query_select['secf_complete'] == 1) {
     $output['step-6'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section F: Essay</h2>
+      '#markup' => '<div class="step"><h2>Essays</h2>
         <div class="step-question">Essay: </div>
         <div class="step-answer">' . $query_select['essay'] . '</div>
         </div>',
@@ -510,7 +536,7 @@ function taglit_apply_user_page() {
   else {
     $output['step-6'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section F: Essay</h2>
+      '#markup' => '<div class="step"><h2>Essays</h2>
         <div class="step-incomplete">Step not yet completed.</div>
         </div>',
     );
@@ -519,7 +545,7 @@ function taglit_apply_user_page() {
   if ($query_select['secg_complete'] == 1) {
     $output['step-7'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section G: Declaration</h2>
+      '#markup' => '<div class="step"><h2>Declaration</h2>
         <div class="step-answer">This application has been submitted and can no longer be edited.</div>
         </div>',
     );     
@@ -527,7 +553,7 @@ function taglit_apply_user_page() {
   else {
     $output['step-7'] = array(
       '#type' => 'markup',
-      '#markup' => '<div class="step"><h2>Section G: Declaration</h2>
+      '#markup' => '<div class="step"><h2>Declaration</h2>
         <div class="step-incomplete">This application has not yet been submitted and can still be edited.</div>
         </div>',
     );

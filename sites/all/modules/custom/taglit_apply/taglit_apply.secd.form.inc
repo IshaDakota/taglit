@@ -28,7 +28,7 @@ function taglit_apply_secd_form($form, $form_state) {
   
    $form['prof_development'] = array(
     '#type' => 'radios',
-    '#title' => t('Have you been a participant on a Taglit-Birthright Israel trip?'),
+    '#title' => t('Professional Development Experience'),
     '#options' => array(
       0 => t('Taglit Fellows will be my first professional development opportunity in Jewish or Israel education.'),
       1 => t('I have participated in the following professional development in Jewish or Israel education.'),

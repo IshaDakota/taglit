@@ -111,13 +111,13 @@ function taglit_apply_sece_form($form_state) {
     '#description' => t('Upload a file, allowed extensions: doc, docx, txt'),
   );
   
-  $form['references'] = array(
+  $form['recommend'] = array(
     '#type' => 'textarea',
     '#title' => '<p>Please list at least two references, each on separate lines as below:
       <br><em>Bruce Wayne, Jewish Federation of Greater Gotham, batman@shalomgotham.org, 808-555-1234</em>
       <br><em>Richard Grayson, Gotham City College Hillel, robin@gcchillel.org, 808-555-4321</em></p>',
     '#rows' => 5,
-    '#default_value' => $query_select['references'],
+    '#default_value' => $query_select['recommend'],
   );
   
   $form['submit'] = array(
@@ -172,8 +172,8 @@ function taglit_apply_sece_form_submit($form, &$form_state) {
         'ed_school_name' 	=> 	$form_state['values']['ed_school_name'],
         'prof_employer' 	=> 	$form_state['values']['prof_employer'],
         'prof_position' 	=> 	$form_state['values']['prof_position'],
+	    	'recommend' 	=> 	$form_state['values']['recommend'],
 	    	'cv_file_path' 	=> 	$file->filename,
-	    	'references' 	=> 	$form_state['values']['references'],
 				'sece_complete' => 1
 			)
 		)

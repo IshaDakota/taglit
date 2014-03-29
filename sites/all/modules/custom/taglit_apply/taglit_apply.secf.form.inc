@@ -19,9 +19,8 @@ function taglit_apply_secf_form($form, $form_state) {
   
   $form['essay1'] = array(
     '#type' => 'text_format',
-    '#title' => 'Tell us about yourself, the work that you do, and why you want to be a part of the 
-    Taglit Fellows program. How do you see yourself contributing to your role as staff and in ensuring 
-    the ongoing Jewish journey of your participants.',
+    '#title' => 'Tell us about yourself and why you want to be a part of the 
+    Taglit Fellows program.',
     '#rows' => 25,
     '#default_value' => $query_select['essay1'],
     '#format' => 'filtered_html',

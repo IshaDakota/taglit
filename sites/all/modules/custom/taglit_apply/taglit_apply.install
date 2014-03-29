@@ -224,7 +224,7 @@ function taglit_apply_schema() {
         'length'				=> 250,
         'not null'      => FALSE,
       ),   
-      'references' => array(
+      'recommend' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
       ),
