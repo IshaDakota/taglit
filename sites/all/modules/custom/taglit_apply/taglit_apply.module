@@ -1,0 +1,240 @@
+<?php
+/**
+ * @file
+ * Taglit Fellows Application Module.
+ *
+ * This module creates an apllication form for the Taglit Fellows website.
+ */
+
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function taglit_apply_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function taglit_apply_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
+* Implements hook_permission().
+*/
+function taglit_apply_permission() {
+  $permission = array(
+    'access application' => array(
+      'title' => t('Access Taglit Fellow Application'),
+      'description' => t('Allow certain users to access and fill out the Taglit Fellows Program Application'),
+    ),
+    'administer application' => array(
+      'title' => t('Administer Taglit Fellows Application'),
+      'description' => t('Allow certain administrators to administer and view the Taglit Fellows Program Applications'),
+    ),    
+  );
+  return $permission;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function taglit_apply_menu() {
+  $items = array(
+    'program-application' => array(
+      'title' =>          'Taglit Fellows Application',
+      'description' =>    'The front page and status page for the Taglit Fellows Application.',
+      'page callback' =>  'taglit_apply_page',
+      'file' =>           'taglit_apply.pages.inc',
+      'menu_name'       => 'main-menu',
+      'access arguments' => array('access application'),
+      'type' => MENU_NORMAL_ITEM,
+    ),
+    'program-application/section-a' => array(
+      'title' => 'Program Application: Section 1',
+      'description' => 'Section A Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_seca_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+    'program-application/section-b' => array(
+      'title' => 'Program Application: Section 2',
+      'description' => 'Section B Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_secb_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+    'program-application/section-c' => array(
+      'title' => 'Program Application: Section 3',
+      'description' => 'Section C Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_secc_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access callback' => TRUE,
+    ),
+    'program-application/section-d' => array(
+      'title' => 'Program Application: Section 4',
+      'description' => 'Section D Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_secd_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+    'program-application/section-e' => array(
+      'title' => 'Program Application: Section 5',
+      'description' => 'Section E Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_sece_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+    'program-application/section-f' => array(
+      'title' => 'Program Application: Section 6',
+      'description' => 'Section F Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_secf_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+    'program-application/section-g' => array(
+      'title' => 'Program Application: Section 7',
+      'description' => 'Section G Page for Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_secg_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+    'user/%user/application' => array(
+      'access callback'  => 'taglit_apply_user_page_access',
+      'description'       => "View a specific user's application.",
+      'file'              => 'taglit_apply.pages.inc',
+      'page callback'     => 'taglit_apply_user_page',
+      'page arguments'    => array(1),
+      'title'             => 'My Application',
+      'type'              => MENU_LOCAL_TASK,
+    ),
+    'program-application/%user' => array(
+      'description'       => "View a specific user's application.",
+      'file'              => 'taglit_apply.pages.inc',
+      'page callback'     => 'taglit_apply_user_page',
+      'page arguments'    => array(1),
+      'title'             => 'Program Application',
+      'access arguments' => array('administer application')
+    ),
+
+  );
+  return $items;
+}
+/**
+ * Implements hook_menu_alter().
+ */
+
+function taglit_apply_menu_alter(&$items) {
+  $items['user/register']['title'] = 'Start an Application';
+  $items['user/register']['weight'] = -99;
+  $items['user/%user/edit']['title'] = 'Edit Profile';
+  $items['user/%user']['title'] = 'View Profile';
+  
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+
+function taglit_apply_form_alter(&$form, &$form_state, $form_id){
+  global $user;
+    if (user_is_anonymous()) { 
+      switch($form_id) {  
+        case 'user_register_form':  //user registration form
+        $form['explanation-text'] = array(
+          '#type' => 'markup',
+          '#markup' => '<p>' . t('To begin your application, fill out the
+            form below. After you submit the form, you will receive an email with a confirmation link
+            that will allow you to continue the application.') . '</p>',
+          '#weight' => '-50',
+        );
+        $form['actions']['submit']['#value'] = 'Start Your Application';
+        break;
+    }
+  }
+}    
+
+function taglit_apply_user_page_access() {
+  global $user;
+  if (arg(0) == 'user' && $user->uid == arg(1) || in_array('administrator', array_values($user->roles))){
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+/**
+ * Checks if there is a application started for the user. If not,
+ * it starts one.
+ */
+function taglit_apply_check_app_exists($user) {
+  $query_select = db_select('taglit_apply') //Query the database to see of the user has a record.
+  ->fields('taglit_apply')
+  ->condition('uid', $user->uid, '=')
+  ->execute()
+  ->fetchAssoc();
+    
+  if (!$query_select) { //insert record if one does not exist.
+    $query_insert = db_insert('taglit_apply')
+    ->fields(array('uid'))
+    ->values(array(
+      'uid' => $user->uid )
+    )
+    ->execute();    
+  }
+}
+
+/**
+ * Adds Items to forms.
+ */
+function taglit_apply_add_item($form, &$form_state) {
+  $form_state['num_items']++;
+  $form_state['rebuild'] = TRUE;
+}
+
+/**
+ *  Removes Items from forms.
+ */
+function taglit_apply_remove_item($form, &$form_state) {
+  if ($form_state['num_items'] > 1) {
+    $form_state['num_items']--;
+  }
+  $form_state['rebuild'] = TRUE;
+}
+
+/**
+* Add a role to a user.
+*
+* @param $user
+*   User object or user ID.
+* @param $role_name
+*   String value of role to be added.
+*
+* @see http_://drupal.org/node/28379#comment-4277052
+* @see http_://api.drupal.org/api/drupal/modules--user--user.module/function/user_save
+*/
+function maprogram_add_role_to_user($user, $role_name) {
+  // For convenience, we'll allow user ids as well as full user objects.
+  if (is_numeric($user)) {
+    $user = user_load($user);
+  }
+  // If the user doesn't already have the role, add the role to that user.
+  $key = array_search($role_name, $user->roles);
+  if ($key == FALSE) {
+    // Get the rid from the roles table.
+    $roles = user_roles(TRUE);
+    $rid = array_search($role_name, $roles);
+    if ($rid != FALSE) {
+      $new_role[$rid] = $role_name;
+      $all_roles = $user->roles + $new_role; // Add new role to existing roles.
+      user_save($user, array('roles' => $all_roles));
+    }
+  }
+}
