@@ -149,7 +149,7 @@ function taglit_apply_form_alter(&$form, &$form_state, $form_id){
         case 'user_register_form':  //user registration form
         $form['explanation-text'] = array(
           '#type' => 'markup',
-          '#markup' => '<p>' . t('To begin your application, fill out the
+          '#markup' => '<p>' . t('To begin your application, you need to create a user account by filling out the
             form below. After you submit the form, you will receive an email with a confirmation link
             that will allow you to continue the application.') . '</p>',
           '#weight' => '-50',
