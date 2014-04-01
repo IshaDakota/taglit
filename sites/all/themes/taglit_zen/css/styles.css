@@ -2191,7 +2191,7 @@ img.staff-pic {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003367}}
-.pane-block-10 {
+#application-open {
   padding: 0 1em;
   margin-top: 1.25em;
   font-size: 1.25em;
@@ -2199,23 +2199,12 @@ img.staff-pic {
   font-weight: 100;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003373}}
-.pane-block-10 #logo-container {
-  text-align: center;
-  clear: both;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003376}}
-.pane-block-10 #logo-container img#icenter-logo, .pane-block-10 #logo-container img#bri-logo {
-  vertical-align: middle;
-  margin: 1em 1.5em;
-  max-width: 150px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003382}}
-.pane-block-10 #apply-now {
+#application-open #apply-now {
   float: right;
   margin-top: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003385}}
-.pane-block-10 #apply-now a {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003376}}
+#application-open #apply-now a {
   background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
   color: #fff;
@@ -2225,8 +2214,8 @@ img.staff-pic {
   text-decoration: none;
   white-space: nowrap;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003395}}
-.pane-block-10 #apply-now a:hover, .pane-block-10 #apply-now a:focus, .pane-block-10 #apply-now a:active {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/Sites\/taglit\/sites\/all\/themes\/taglit_zen\/sass\/components\/_page\.scss}line{font-family:\00003386}}
+#application-open #apply-now a:hover, #application-open #apply-now a:focus, #application-open #apply-now a:active {
   background-color: #D7D5D3;
   color: #100101;
   -webkit-transition: background-color 0.3s;
