@@ -167,6 +167,7 @@ function taglit_apply_seca_form($form, $form_state) {
     '#title' => t('Mobile Phone Number'),
     '#size' => 15,
 		'#maxlength' => 15,
+    '#required' => TRUE,		
     '#default_value' => $query_select['mobile_phone'],
   );
 

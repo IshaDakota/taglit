@@ -113,7 +113,7 @@ function taglit_apply_secb_form($form, $form_state) {
 
  $form['jewish_elementary'] = array(
     '#type' => 'select',
-    '#title' => t('During Grades 1-8 (elementary school), how many years did you attend a full-time Jewish school?'),
+    '#title' => t('During Grades 1-8 (elementary school), how many years did you attend a full-time Jewish school e.g., Schecter, etc.?'),
     '#options' => array(
       0 => t('0'),
       1 => t('1'),
@@ -143,7 +143,7 @@ function taglit_apply_secb_form($form, $form_state) {
 
  $form['jewish_supplementary'] = array(
     '#type' => 'select',
-    '#title' => t('How many years did you attend a Jewish supplementary school?'),
+    '#title' => t('How many years did you attend a Jewish supplementary school e.g., Hebrew school?'),
     '#options' => array(
       0 => t('0'),
       1 => t('1'),
@@ -164,7 +164,7 @@ function taglit_apply_secb_form($form, $form_state) {
 
  $form['jewish_camp'] = array(
     '#type' => 'select',
-    '#title' => t('How many summers did you attend a Jewish summer camp?'),
+    '#title' => t('How many summers did you attend a Jewish summer camp as a camper?'),
     '#options' => array(
       0 => t('0'),
       1 => t('1'),

@@ -220,7 +220,7 @@ function taglit_apply_remove_item($form, &$form_state) {
 * @see http_://drupal.org/node/28379#comment-4277052
 * @see http_://api.drupal.org/api/drupal/modules--user--user.module/function/user_save
 */
-function maprogram_add_role_to_user($user, $role_name) {
+function taglit_apply_add_role_to_user($user, $role_name) {
   // For convenience, we'll allow user ids as well as full user objects.
   if (is_numeric($user)) {
     $user = user_load($user);

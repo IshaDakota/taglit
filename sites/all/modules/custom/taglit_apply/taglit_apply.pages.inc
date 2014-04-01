@@ -33,11 +33,11 @@ function taglit_apply_page() {
       submit your application for the Taglit Fellows 
       Program. You may complete work in one section and then return at 
       a later point to complete additional sections. The entire application 
-      must be complete by May 15, 2014') . '</p>
+      must be complete by May 15, 2014.') . '</p>
       
       <p>' . t('When you have completed sections 1 - 6, an additional section 
       (Section 7: Declaration) will appear. After you sign and submit the 
-      declaration, you application will be locked and you will no longer 
+      declaration, your application will be locked and you will no longer 
       be able to edit any sections.') . '</p>
       
       <p>' . t('If you have any questions about your application, please 
@@ -212,7 +212,7 @@ function taglit_apply_secf_page() {
  * Render the page for the Section G of the Application.
  */
 function taglit_apply_secg_page() {
-  module_load_include('inc', 'taglit_apply', 'taglit_apply.secf.form');
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.secg.form');
   $output =  array(
     'header' => array(
       '#type' => 'markup',
@@ -390,7 +390,6 @@ function taglit_apply_user_page() {
     $israel_role = unserialize($query_select['israel_role']);
 
     $count_array = count($israel_program);
-    echo $count_array;
     
     $output['step-3-header'] = array(
         '#type' => 'markup',
@@ -528,8 +527,10 @@ function taglit_apply_user_page() {
     $output['step-6'] = array(
       '#type' => 'markup',
       '#markup' => '<div class="step"><h2>Essays</h2>
-        <div class="step-question">Essay: </div>
-        <div class="step-answer">' . $query_select['essay'] . '</div>
+        <div class="step-question">Essay #1: </div>
+        <div class="step-answer">' . $query_select['essay1'] . '</div>
+        <div class="step-question">Essay #2: </div>
+        <div class="step-answer">' . $query_select['essay2'] . '</div>
         </div>',
     );     
   }

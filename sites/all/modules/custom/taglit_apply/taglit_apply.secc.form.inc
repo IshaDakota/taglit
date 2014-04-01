@@ -112,9 +112,9 @@ function taglit_apply_secc_form($form, $form_state) {
   );
   
    $form['intro'] = array(
-    '#markup' => '<p>Besides Taglit-Birthright Israel, please list your 
+    '#markup' => '<p>In addition to Taglit-Birthright Israel, please list your 
     educational programs/experiences in Israel beginning with the most recent 
-    (list both participant and staff experiences).:</p>',
+    (list both participant and staff experiences):</p>',
   );
 
   // Build the number of name fieldsets indicated by $form_state['num_names']

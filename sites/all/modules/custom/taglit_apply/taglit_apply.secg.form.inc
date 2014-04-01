@@ -56,7 +56,7 @@ function taglit_apply_secg_form_submit($form, &$form_state) {
   ->condition('uid', $user->uid, '=')
   ->execute();
   
-  maprogram_add_role_to_user($user, 'applicant');
+  taglit_apply_add_role_to_user($user, 'applicant');
   
   $form_state['redirect'] = 'program-application';
 }

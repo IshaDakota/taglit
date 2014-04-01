@@ -108,7 +108,7 @@ function taglit_apply_sece_form($form_state) {
   $form['file'] = array(
     '#type' => 'file',
     '#title' => t('Upload a copy of your CV (one page only)'),
-    '#description' => t('Upload a file, allowed extensions: doc, docx, txt'),
+    '#description' => t('Upload a file, allowed extensions: doc, docx, pdf, txt'),
   );
   
   $form['recommend'] = array(
@@ -133,7 +133,7 @@ function taglit_apply_sece_form($form_state) {
  */
 function taglit_apply_sece_form_validate($form, &$form_state) {
   $file = file_save_upload('file', array(
-    'file_validate_extensions' => array('doc docx txt'), // Validate extensions.
+    'file_validate_extensions' => array('doc docx txt pdf'), // Validate extensions.
   ));
   // If the file passed validation:
   if ($file) {

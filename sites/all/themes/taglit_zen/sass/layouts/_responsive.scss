@@ -37,7 +37,7 @@ $zen-auto-include-item-base: false;
   margin-right: auto;
 }
 
-#content, .region-navigation, #name-and-slogan {
+#content, #name-and-slogan {
   max-width: 1200px;
 }
 
@@ -83,7 +83,7 @@ $zen-auto-include-item-base: false;
     /* Move the navbar up inside #main's padding. */
     position: absolute;
     top: 0;
-    height: $nav-height;
+    height: auto;
     width: $zen-grid-width;
     font-size: .65em;
   }
@@ -99,7 +99,7 @@ $zen-auto-include-item-base: false;
     /* Move the navbar up inside #main's padding. */
     position: absolute;
     top: 0;
-    height: $nav-height;
+    height: auto;
     width: $zen-grid-width;
     font-size: 1em;
   }
