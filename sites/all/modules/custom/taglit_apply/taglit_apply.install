@@ -126,6 +126,12 @@ function taglit_apply_schema() {
         'length'				=> 250,
         'not null'      => FALSE,
       ),          
+      'jewish_background' => array(
+        'default'       => 0,
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'          => 'small',
+        ),    
       'israel_birthright' => array(
         'default'       => 0,
         'description'   => 'Data Field for Taglit Fellows Program Application.',
@@ -236,6 +242,12 @@ function taglit_apply_schema() {
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'text',
       ),
+      'referred' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'size'					=> '200',
+        'not null'      => FALSE,
+      ),       
       'declaration' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'int',
@@ -297,7 +309,7 @@ function taglit_apply_schema() {
         'size'					=> 'tiny',
         'not null'      => TRUE,
         'default'				=> 0,
-      ),                 
+      ),                        
     ),
     'primary key'       => array('taglit_apply_id'),
   );
@@ -305,6 +317,30 @@ function taglit_apply_schema() {
   return $schema;
 
 }
+
+/**
+* Add newcol field to {mytable1} table.
+*/
+function mymodule_update_7100() {
+  $spec1 = array(
+    'type' => 'varchar',
+    'description' => "Data Field",
+    'length' => 200,
+    'not null' => FALSE,
+  );
+  db_add_field( 'taglit_apply', 'referred', $spec1);
+
+  $spec2 = array(
+    'type' => 'int',
+    'description' => "Datafield",
+    'length' => 'small',
+    'not null' => FALSE,
+  );
+  db_add_field( 'taglit_apply', 'jewish_background', $spec2);
+
+}
+
+
 
 /**
  * Implements hook_uninstall().

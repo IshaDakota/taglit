@@ -27,6 +27,16 @@ function taglit_apply_secg_form($form, $form_state) {
     '#required' => TRUE,
     '#default_value' => $query_select['declaration'],
   );
+
+ $form['referred'] = array(
+    '#type' => 'textfield',
+    '#title' => t('I heard about the Taglit Fellows program from:'),
+    '#size' => 100,
+		'#maxlength' => 200,
+    '#required' => TRUE,
+    '#default_value' => $query_select['referred'],
+  );
+
  $form['initials'] = array(
     '#type' => 'textfield',
     '#title' => t('Initials'),
@@ -50,6 +60,7 @@ function taglit_apply_secg_form_submit($form, &$form_state) {
   		array(
 	    	'declaration' 	=> 	$form_state['values']['declaration'],
 	    	'initials' 	=> 	$form_state['values']['initials'],
+	    	'reffered' 	=> 	$form_state['values']['reffered'],
 				'secg_complete' => 1
 			)
 		)
@@ -58,5 +69,5 @@ function taglit_apply_secg_form_submit($form, &$form_state) {
   
   taglit_apply_add_role_to_user($user, 'applicant');
   
-  $form_state['redirect'] = 'program-application';
+  $form_state['redirect'] = 'program-application/complete';
 }

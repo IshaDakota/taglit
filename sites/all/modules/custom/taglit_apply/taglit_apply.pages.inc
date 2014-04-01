@@ -562,3 +562,42 @@ function taglit_apply_user_page() {
       
   return $output;
 }
+
+function taglit_apply_complete_page() { 
+  global $user;
+	
+	$query_select = db_select('taglit_apply') //Query the database to see of the user has a record.
+  ->fields('taglit_apply')
+  ->condition('uid', $user->uid, '=')
+  ->execute()
+  ->fetchAssoc();
+  if ($query_select['seca_complete'] && 
+    $query_select['secb_complete'] && 
+    $query_select['secc_complete'] && 
+    $query_select['secd_complete'] && 
+    $query_select['sece_complete'] && 
+    $query_select['secf_complete']) {
+      $app_complete = 'Y';
+    } 
+    else {
+      $app_complete = 'N';
+    }
+  $output =  array(    
+    'body-text' => array(
+      '#type' => 'markup',
+      '#markup' => '<p>' . t('Congratulations - your application is completed and submitted.') . '</p>
+      
+      <p>' . t('If you have any questions about your application, please 
+      contact Aliza Goodman at 847-418-8336 or ') . 
+      '<a href="mailto:aliza@theicenter.org">aliza@theicenter.org</a></p>',
+    ),
+    'main_link' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="next-step">' .
+      l(t('Return to Application Page'),
+      'program-application') . '</div>',
+    ),    
+  );
+  return $output;
+}
+

@@ -236,6 +236,26 @@ function taglit_apply_secb_form($form, $form_state) {
     ),     
   );
   
+ $form['jewish_background'] = array(
+    '#type' => 'select',
+    '#title' => t('I describe my Jewish background as:'),
+    '#options' => array(
+      0 => t('Just Jewish'),
+      1 => t('Conservative'),
+      2 => t('Orthodox'),
+      3 => t('Reform'),
+      4 => t('Reformative'),
+      5 => t('Secular Humanist'),
+      6 => t('Reconstructionist'),
+      7 => t('Traditional'),
+      8 => t('Not Jewish'),
+      9 => t('Other'),
+      10 => t('Another Religion'),
+      ),
+    '#required' => TRUE,
+    '#default_value' => $query_select['jewish_background'],
+  );  
+  
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Submit'),
@@ -275,6 +295,7 @@ function taglit_apply_secb_form_submit($form, &$form_state) {
     'jewish_camp_name' 	=> 	$form_state['values']['jewish_camp_name'],
     'jewish_youthgroup' 	=> 	$form_state['values']['jewish_youthgroup'],
     'jewish_youthgroup_name' 	=> 	$form_state['values']['jewish_youthgroup_name'],
+    'jewish_background' 	=> 	$form_state['values']['jewish_background'],
     'secb_complete' => 1
   ))
   ->condition('uid', $user->uid, '=')

@@ -104,6 +104,15 @@ function taglit_apply_menu() {
       'file' => 'taglit_apply.pages.inc',
       'access arguments' => array('access application'),
     ),
+
+    'program-application/complete' => array(
+      'title' => 'Program Application: Complete',
+      'description' => 'SCompleteion Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_complete_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access application'),
+    ),
+
     'user/%user/application' => array(
       'access callback'  => 'taglit_apply_user_page_access',
       'description'       => "View a specific user's application.",
