@@ -599,5 +599,6 @@ function taglit_apply_complete_page() {
     ),    
   );
   return $output;
+  rules_invoke_component('rules_send_completion_email', $user)
 }
 
