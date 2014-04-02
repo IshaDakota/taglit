@@ -69,5 +69,7 @@ function taglit_apply_secg_form_submit($form, &$form_state) {
   
   taglit_apply_add_role_to_user($user, 'applicant');
   
+  rules_invoke_component('rules_send_completion_email', $user);
+ 
   $form_state['redirect'] = 'program-application/complete';
 }

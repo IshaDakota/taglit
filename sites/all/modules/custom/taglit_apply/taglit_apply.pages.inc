@@ -566,8 +566,6 @@ function taglit_apply_user_page() {
 function taglit_apply_complete_page() { 
   global $user;
 	
-  rules_invoke_component('rules_send_completion_email', $user);
-
 	$query_select = db_select('taglit_apply') //Query the database to see of the user has a record.
   ->fields('taglit_apply')
   ->condition('uid', $user->uid, '=')
