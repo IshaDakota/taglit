@@ -60,7 +60,7 @@ function taglit_apply_secg_form_submit($form, &$form_state) {
   		array(
 	    	'declaration' 	=> 	$form_state['values']['declaration'],
 	    	'initials' 	=> 	$form_state['values']['initials'],
-	    	'reffered' 	=> 	$form_state['values']['reffered'],
+	    	'referred' 	=> 	$form_state['values']['referred'],
 				'secg_complete' => 1
 			)
 		)
