@@ -370,7 +370,9 @@ function taglit_apply_user_page() {
           ($query_select['jewish_camp'] != 0 ?  ' - ' . $query_select['jewish_camp_name'] : '') . ' </div>
         <div class="step-question"><strong>Jewish Youth Group</strong>: ' . 
           ($query_select['jewish_youthgroup'] == 0 ? 'N' : 'Y - ' . $query_select['jewish_youthgroup_name']) . '</div>
-        </div>',
+        </div>
+        <div class="step-question"><strong>Jewish Background:</strong> ' . $query_select['jewish_background'] .'</div>',
+        
     );     
 
   }
@@ -511,6 +513,9 @@ function taglit_apply_user_page() {
       '#type' => 'markup',
       '#markup' => '<div class="step"><h2>Work Experience</h2>
         <div class="step-question"><strong>Uploaded CV/Resume:</strong> <a href="/' . variable_get("file_public_path", conf_path() . "/files/") .  $query_select['cv_file_path'] . '">' . $query_select['cv_file_path'] . '</a></div>
+        <div class="step-question">references: </div>
+        <div class="step-answer">' . $query_select['recommend'] . '</div>
+        
         </div>',
     );     
   }
@@ -547,6 +552,8 @@ function taglit_apply_user_page() {
     $output['step-7'] = array(
       '#type' => 'markup',
       '#markup' => '<div class="step"><h2>Declaration</h2>
+        <div class="step-question">Referred by: </div>
+        <div class="step-answer">' . $query_select['referred'] . '</div>
         <div class="step-answer">This application has been submitted and can no longer be edited.</div>
         </div>',
     );     
