@@ -513,8 +513,8 @@ function taglit_apply_user_page() {
       '#type' => 'markup',
       '#markup' => '<div class="step"><h2>Work Experience</h2>
         <div class="step-question"><strong>Uploaded CV/Resume:</strong> <a href="/' . variable_get("file_public_path", conf_path() . "/files/") .  $query_select['cv_file_path'] . '">' . $query_select['cv_file_path'] . '</a></div>
-        <div class="step-question">references: </div>
-        <div class="step-answer">' . $query_select['recommend'] . '</div>
+        <div class="step-question"><strong>References:</strong></div>
+        <div class="step-answer">' . nl2br($query_select['recommend']) . '</div>
         
         </div>',
     );     
