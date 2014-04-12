@@ -245,7 +245,7 @@ function taglit_apply_schema() {
       'referred' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'varchar',
-        'size'					=> '200',
+        'length'					=> 250,
         'not null'      => FALSE,
       ),       
       'declaration' => array(
@@ -317,30 +317,6 @@ function taglit_apply_schema() {
   return $schema;
 
 }
-
-/**
-* Add newcol field to {mytable1} table.
-*/
-function mymodule_update_7100() {
-  $spec1 = array(
-    'type' => 'varchar',
-    'description' => "Data Field",
-    'length' => 200,
-    'not null' => FALSE,
-  );
-  db_add_field( 'taglit_apply', 'referred', $spec1);
-
-  $spec2 = array(
-    'type' => 'int',
-    'description' => "Datafield",
-    'length' => 'small',
-    'not null' => FALSE,
-  );
-  db_add_field( 'taglit_apply', 'jewish_background', $spec2);
-
-}
-
-
 
 /**
  * Implements hook_uninstall().

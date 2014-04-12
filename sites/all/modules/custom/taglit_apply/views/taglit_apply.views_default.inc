@@ -1,6 +1,7 @@
 <?php
 
-function hook_views_default_views() {
+function taglit_apply_views_default_views() {
+  $views = array();
 
   $view = new view();
   $view->name = 'applications';
@@ -838,3 +839,4 @@ function hook_views_default_views() {
   
   // At the end, return array of default views.
   return $views;
+}
