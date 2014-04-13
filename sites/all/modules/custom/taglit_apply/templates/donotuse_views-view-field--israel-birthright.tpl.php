@@ -2,47 +2,37 @@
 
 /**
  * @file
- * Default simple view template to all the fields as a row.
+ * This template is used to print a single field in a view.
  *
- * - $view: The view in use.
- * - $fields: an array of $field objects. Each one contains:
- *   - $field->content: The output of the field.
- *   - $field->raw: The raw data for the field, if it exists. This is NOT output safe.
- *   - $field->class: The safe class id to use.
- *   - $field->handler: The Views field handler object controlling this field. Do not use
- *     var_export to dump this object, as it can't handle the recursion.
- *   - $field->inline: Whether or not the field should be inline.
- *   - $field->inline_html: either div or span based on the above flag.
- *   - $field->wrapper_prefix: A complete wrapper containing the inline_html to use.
- *   - $field->wrapper_suffix: The closing tag for the wrapper.
- *   - $field->separator: an optional separator that may appear before a field.
- *   - $field->label: The wrap label text to use.
- *   - $field->label_html: The full HTML of the label to use including
- *     configured element type.
- * - $row: The raw result object from the query, with all data it fetched.
+ * It is not actually used in default Views, as this is registered as a theme
+ * function which has better performance. For single overrides, the template is
+ * perfectly okay.
  *
- * @ingroup views_templates
+ * Variables available:
+ * - $view: The view object
+ * - $field: The field handler object that can process the input
+ * - $row: The raw SQL result that can be used
+ * - $output: The processed output that will normally be used.
+ *
+ * When fetching output from the $row, this construct should be used:
+ * $data = $row->{$field->field_alias}
+ *
+ * The above will guarantee that you'll always get the correct data,
+ * regardless of any changes in the aliasing that might happen if
+ * the view is modified.
  */
 ?>
-<?php foreach ($field as $id => $field): ?>
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; ?>
+<?php 
 
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php
-    //$value = $data[0]['raw']['value'];
-    
-   // switch($value) {
-   //   case 1:
-   //     print('Yes');
-   //     break;
-   //   case 0:
-   //     print('No');
-   //     break;
-   // }
-    print $field->content; 
-    ?>
-  <?php print $field->wrapper_suffix; ?>
-<?php endforeach; ?>
+if ($field->field_alias == 'taglit_apply_israel_birthright') {
+$data = $row->taglit_apply_israel_birthright;
+
+switch($data) {
+  case 0:
+    print('No');
+    break;
+  case 1:
+    print('Yes');
+    break;
+}
+}
