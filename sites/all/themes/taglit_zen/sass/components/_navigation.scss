@@ -55,3 +55,45 @@
     }
   }
 }
+
+/* Basic positioning styles shared by primary and secondary tabs. */
+
+#block-menu-block-2 ul.menu {
+  @include clearfix;
+  list-style: none;
+  margin: rhythm(1) 0;
+  padding: 0 2px;
+  white-space: nowrap;
+  li {
+    float: left;
+    margin: 3px;
+    border-bottom: 0 \0/ie;
+    list-style-type: none;
+    list-style-image: none;
+    a {
+      @include adjust-leading-to(1);
+      @include transition(background-color 0.3s);
+      border-right: 0;
+      border-bottom: 0;
+      display: block;
+      text-decoration: none;
+      color: #333;
+      background-color: #dedede;
+      letter-spacing: 1px;
+      padding: 0.5em 1em;
+      text-align: center;
+    }
+    a:hover, a:focus {
+      background-color: #e9e9e9;
+      border-color: #f2f2f2;
+    }
+  }
+  li.menu__item is-active {
+    border-right: 0;
+    border-bottom: 0;
+    display: block;
+    @include adjust-leading-to(1);
+    text-decoration: none;
+  }
+}
+

@@ -134,6 +134,23 @@ switch($field->field_alias) {
     }
     break; 
 
+  case 'users_taglit_apply_uid':
+  
+    if (strpos($output,'August') !== false) {
+      print 'August';
+    }
+    elseif (strpos($output,'February') !== false) {
+        print 'February';      
+    }
+    elseif (strpos($output,'either') !== false) {
+        print 'Either';      
+    }
+    else {
+      print $output;
+    }
+
+    break; 
+
   default:
     print $output;
     break;
