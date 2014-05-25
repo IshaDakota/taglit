@@ -17,6 +17,11 @@ Drupal.behaviors.mediaElement = {
     if (settings.media && settings.media.elements) {
       $.each(settings.media.elements, function(selector) {
         var configuration = settings.media.elements[selector];
+        // The user has JavaScript enabled, so display the browse field and hide
+        // the upload field which is only used as a fallback in case the user
+        // is unable to use the media browser.
+        $(selector, context).children('.browse').show();
+        $(selector, context).children('.upload').hide();
         $(selector, context).children('.browse').unbind().bind('click', {configuration: configuration}, Drupal.media.openBrowser);
       });
     }
@@ -54,10 +59,10 @@ Drupal.media.openBrowser = function (event) {
   var clickedButton = this;
   var configuration = event.data.configuration.global;
 
-  // Find the file ID and preview fields.
+  // Find the file ID, preview and upload fields.
   var fidField = $(this).siblings('.fid');
-
   var previewField = $(this).siblings('.preview');
+  var uploadField = $(this).siblings('.upload');
 
   // Find the edit and remove buttons.
   var editButton = $(this).siblings('.edit');
@@ -74,12 +79,8 @@ Drupal.media.openBrowser = function (event) {
     var mediaFile = mediaFiles[0];
 
     // Set the value of the hidden file ID field and trigger a change.
-    fidField.val(mediaFile.fid);
-    fidField.trigger('change');
-
-    // Find the attach button and automatically trigger it.
-    var attachButton = fidField.siblings('.attach');
-    attachButton.trigger('mousedown');
+    uploadField.val(mediaFile.fid);
+    uploadField.trigger('change');
 
     // Display a preview of the file using the selected media file's display.
     previewField.html(mediaFile.preview);
