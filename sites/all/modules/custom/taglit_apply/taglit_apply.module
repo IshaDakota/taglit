@@ -37,6 +37,10 @@ function taglit_apply_permission() {
       'title' => t('Access Taglit Fellow Application'),
       'description' => t('Allow certain users to access and fill out the Taglit Fellows Program Application'),
     ),
+    'access accepted' => array(
+      'title' => t('Access Accepted Applicant Areas'),
+      'description' => t('Allow accepted applicants to access and fill out the Taglit Fellows program agreements'),
+    ),
     'administer application' => array(
       'title' => t('Administer Taglit Fellows Application'),
       'description' => t('Allow certain administrators to administer and view the Taglit Fellows Program Applications'),
