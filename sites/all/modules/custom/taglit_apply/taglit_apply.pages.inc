@@ -342,7 +342,14 @@ function taglit_apply_agmt_page() {
       years of completing the program, with a commitment to staff the first 
       of these trips within the first 12 months of the end of the workshop 
       listed above.</li>
+      
+      <li>The Taglit Fellows, Taglit Birthright Israel nor the iCenter are 
+      the employers of the graduates of the Taglit Fellows program with regards 
+      to staffing Taglit-Birthright Israel buses following program completion. 
+      Employment of Taglit Fellows is by agreement between the Fellow and the 
+      specific Taglit-Birthright Israel accredited Trip Organizer.</li>
       </ul>
+      
       <p>In addition, each fellow must understand and sign in agreement to the 
       following: 
 
