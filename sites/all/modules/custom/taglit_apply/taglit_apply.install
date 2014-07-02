@@ -261,6 +261,19 @@ function taglit_apply_schema() {
         'length'				=> 3,
         'not null'      => FALSE,
       ),      
+      'agreement' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),
+      'agmt_initials' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'varchar',
+        'length'				=> 3,
+        'not null'      => FALSE,
+      ),      
       'seca_complete' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'int',
@@ -304,6 +317,13 @@ function taglit_apply_schema() {
         'default'				=> 0,
       ),
       'secg_complete' => array(
+        'description'   => 'Data Field for Taglit Fellows Program Application.',
+        'type'          => 'int',
+        'size'					=> 'tiny',
+        'not null'      => TRUE,
+        'default'				=> 0,
+      ),                        
+      'secagmt_complete' => array(
         'description'   => 'Data Field for Taglit Fellows Program Application.',
         'type'          => 'int',
         'size'					=> 'tiny',

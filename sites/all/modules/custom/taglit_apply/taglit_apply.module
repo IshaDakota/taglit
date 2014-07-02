@@ -112,7 +112,13 @@ function taglit_apply_menu() {
       'file' => 'taglit_apply.pages.inc',
       'access arguments' => array('access application'),
     ),
-
+    'program-application/agreement-letter' => array(
+      'title' => 'Program Application: Letter of Agreement',
+      'description' => 'Page for Accepted Taglit Fellows Program Application.',
+      'page callback' => 'taglit_apply_agmt_page',
+      'file' => 'taglit_apply.pages.inc',
+      'access arguments' => array('access accepted'),
+    ),
     'program-application/complete' => array(
       'title' => 'Program Application: Complete',
       'description' => 'SCompleteion Taglit Fellows Program Application.',

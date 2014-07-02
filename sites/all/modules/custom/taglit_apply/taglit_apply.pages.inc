@@ -63,11 +63,41 @@ function taglit_apply_page() {
         '">' . l(t('Section 7: Declaration'), 'program-application/section-g') . '</li>' : '') .
            '</ul>',
     ),
+    
     'app_complete' => array(
       '#type' => 'markup',
       '#markup' => ''
     ),
   );
+  
+  // For a specific user
+  if (user_access('access accepted', $user)) {
+    $output[] = array (
+      'accepted' => array(
+        '#type' => 'markup',
+        '#markup' => '<h3>Congratulations on being accepted as a Taglit Fellow!</h3>
+        <p>Final acceptance to this program is conditional and contingent upon submitting
+         the acknowledged letter of agreement and completed training seminar registration form. 
+         The dates of the seminar are Sunday, August 24 through Wednesday, August 27.</p>
+         <p>Please complete the following:
+         
+         <ul class = "application-sections">
+         <li class = "' . ($query_select['secagmt_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
+          l(t('Confirm your acceptance and submit the Letter of Agreement by Monday, July 7'), 'program-application/agreement-letter') . '</li>
+          
+          <li class="section-incomplete">' . l(t('Confirm your attendance at the seminar by completing the
+           online registration by Friday, July 11'),  
+          'http://taglitfellowsaugust2014.eventbrite.com') . '</li>
+          </ul>
+
+    <p>Once we receive your letter of agreement and confirmation, we will be in touch with 
+    instructions on how to you to book your travel to Chicago. Upon receiving the travel information 
+    email, you will have up to 3 days to contact our travel agent to book your ticket. Please note that 
+    we will be covering all expenses associated with the workshop, including transportation costs, 
+    room and board.</p>', 
+      )  
+    );
+  }  
   return $output;
 }
 
@@ -245,6 +275,100 @@ function taglit_apply_secg_page() {
   );    
   return $output;
 }
+
+function taglit_apply_agmt_page() {
+  global $user;
+
+  $user_fields=user_load($user->uid);
+  if (isset($user_fields->field_first_name['und']['0']['value'])) { 
+    $first_name = $user_fields->field_first_name['und']['0']['value'];
+  } 
+  else{
+    $first_name = NULL;
+  }
+  if (isset($user_fields->field_middle_name['und']['0']['value'])) { 
+    $middle_name = $user_fields->field_middle_name['und']['0']['value'];
+  }
+  else {
+    $middle_name =NULL;
+  }
+  if (isset($user_fields->field_last_name['und']['0']['value'])) { 
+    $last_name = $user_fields->field_last_name['und']['0']['value'];
+  }  
+  else {
+    $last_name = NULL;  
+  }
+
+  $applicant_name = $first_name . ' ' . $middle_name . ' ' . $last_name;
+  
+  module_load_include('inc', 'taglit_apply', 'taglit_apply.agmt.form');
+  
+  $output =  array(
+    'header' => array(
+      '#type' => 'markup',
+      '#markup' => '<h2 >Letter of Agreement</h2>',
+    ),
+    'intro' => array(
+      '#type' => 'markup',
+      '#markup' => '<p>This memorandum of understanding is between The Taglit 
+      Fellows Program and ' . $applicant_name . ', 2014 Taglit Fellow (“the fellow”)</p>
+
+      <p>It describes roles and responsibilities for the fellow.
+
+      <p>The goal of the fellowship is to develop an elite cadre of American 
+      experiential Jewish educators to enhance Taglit-Birthright Israel 
+      experiences and the broader field of Israel and Jewish education.
+
+      <p>Taglit Fellows will work together from July 2014 through December 2014 
+      on a number of activities related to intensive professional development 
+      for experiential Jewish educators to staff Taglit-Birthright Israel trips. 
+      Each fellow will be required to complete the following:
+
+      <ul>
+      <li>Fully attend and participate in the upcoming August 24-27, 2014 
+      workshop in Chicago, IL.</li>
+
+      <li>Understand that acceptance to the Taglit Fellows program is the 
+      first step in being considered for certification as a Taglit Fellow. 
+      The Taglit Fellows Educational Committee reserves the right to make 
+      a final decision on which participants will receive certification 
+      from the program based upon participation and evaluation at the 
+      in-person workshop and successful completion of all other commitments 
+      and milestones as outlined below.</li>
+
+      <li>Staff a minimum of three Taglit-Birthright Israel trips within three 
+      years of completing the program, with a commitment to staff the first 
+      of these trips within the first 12 months of the end of the workshop 
+      listed above.</li>
+      </ul>
+      <p>In addition, each fellow must understand and sign in agreement to the 
+      following: 
+
+      <ul>
+      <li>Accepting a spot on Taglit Fellows commits me to online and distance 
+      learning before and after the August workshop, with milestone achievements 
+      (such as educational projects and proof of comprehension of policies and 
+      learning concepts).</li>
+      
+      <li>Post-trip engagement with all of the participants on the bus(es) staffed 
+      by a Taglit Fellow will also be a part of their responsibilities as 
+      a Taglit Fellow. And, that assisting participants on their continued Jewish 
+      journeys beyond their ten-day trip is considered part of the Taglit 
+      Fellows mission.</li>
+      </ul>',
+    ),
+    'display_form' => drupal_get_form('taglit_apply_agmt_form'),
+
+    'main_link' => array(
+      '#type' => 'markup',
+      '#markup' => '<div class="next-step">' .
+      l(t('Return to Application Page'),
+      'program-application') . '</div>',
+    ),
+  );    
+  return $output;
+}
+
 
 /**
  * Render the display for the application for a certain user.
