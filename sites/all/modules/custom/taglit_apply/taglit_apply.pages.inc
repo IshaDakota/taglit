@@ -33,17 +33,21 @@ function taglit_apply_page() {
       submit your application for the Taglit Fellows 
       Program. You may complete work in one section and then return at 
       a later point to complete additional sections. The entire application 
-      must be complete by May 15, 2014.') . '</p>
-      
-      <p>' . t('When you have completed sections 1 - 6, an additional section 
-      (Section 7: Declaration) will appear. After you sign and submit the 
-      declaration, your application will be locked and you will no longer 
-      be able to edit any sections.') . '</p>
-      
-      <p>' . t('If you have any questions about your application, please 
-      contact Aliza Goodman at 847-418-8336 or ') . 
-      '<a href="mailto:aliza@theicenter.org">aliza@theicenter.org</a></p>',
+      must be complete by May 15, 2014.') . '</p>',
     ),
+  );
+  if ($app_complete == 'N') {
+    $output[] = array(
+      'section-seven' => array(
+        '#type' => 'markup',
+        '#markup' => '<p>' . t('When you have completed sections 1 - 6, an additional section 
+        (Section 7: Declaration) will appear. After you sign and submit the 
+        declaration, your application will be locked and you will no longer 
+        be able to edit any sections.') . '</p>',
+      ),
+    );
+  }
+  $output[] = array(
     'quest_list' => array(
       '#type' => 'markup',
       '#markup' => '<ul class = "application-sections">
@@ -64,9 +68,11 @@ function taglit_apply_page() {
            '</ul>',
     ),
     
-    'app_complete' => array(
+    'closing' => array(
       '#type' => 'markup',
-      '#markup' => ''
+      '#markup' => '<p>' . t('If you have any questions about your application, please 
+      contact Aliza Goodman at 847-418-8336 or ') . 
+      '<a href="mailto:aliza@theicenter.org">aliza@theicenter.org</a></p>'
     ),
   );
   
@@ -75,12 +81,8 @@ function taglit_apply_page() {
     $output[] = array (
       'accepted' => array(
         '#type' => 'markup',
-        '#markup' => '<h3>Congratulations on being accepted as a Taglit Fellow!</h3>
-        <p>Final acceptance to this program is conditional and contingent upon submitting
-         the acknowledged letter of agreement and completed training seminar registration form. 
-         The dates of the seminar are Sunday, August 24 through Wednesday, August 27.</p>
+        '#markup' => '<h2>Status: Congratulations on being accepted as a Taglit Fellow!</h2>
          <p>Please complete the following:
-         
          <ul class = "application-sections">
          <li class = "' . ($query_select['secagmt_complete'] == 1 ? 'section-complete' : 'section-incomplete') . '">' .
           l(t('Confirm your acceptance and submit the Letter of Agreement by Monday, July 7'), 'program-application/agreement-letter') . '</li>
