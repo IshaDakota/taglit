@@ -58,15 +58,13 @@ function media_entity_info_alter(&$entity_info) {
   // view modes.
   // @see http://drupal.org/node/1051090
   if (variable_get('media_show_deprecated_view_modes', FALSE)) {
-    $entity_info['file']['view modes'] += array(
-      'media_link' => array(
-        'label' => t('Link'),
-        'custom settings' => TRUE,
-      ),
-      'media_original' => array(
-        'label' => t('Original'),
-        'custom settings' => TRUE,
-      ),
+    $entity_info['file']['view modes']['media_link'] = array(
+      'label' => t('Link'),
+      'custom settings' => TRUE,
+    );
+    $entity_info['file']['view modes']['media_original'] = array(
+      'label' => t('Original'),
+      'custom settings' => TRUE,
     );
   }
 
