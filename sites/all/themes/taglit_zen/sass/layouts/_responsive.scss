@@ -215,7 +215,21 @@ $zen-auto-include-item-base: false;
 
   .panel-col-sidebar-first {
     @include zen-grid-item(2, 3);
-  }  
+  }
+  
+  #fellows-roster .panel-col-content {
+      @include zen-grid-item(3, 1);
+      h3 {
+        margin-bottom: 0;
+      }
+      .views-field-city, .views-field-state {
+        font-weight: bold;
+      }
+    }
+  
+  #fellows-roster .panel-col-sidebar-first {
+      @include zen-grid-item(1, 4);
+    }
 
   /**
    * The layout when there is only one sidebar, the left one.
