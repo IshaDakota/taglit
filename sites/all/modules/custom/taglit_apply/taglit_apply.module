@@ -184,7 +184,6 @@ function taglit_apply_form_alter(&$form, &$form_state, $form_id){
   switch($form_id) {
     case 'user_profile_form':  //user profile form
       unset($form['mimemail']);
-      dpm($form);
     break;
   }
 }    
